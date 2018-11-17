@@ -11,14 +11,19 @@ import dadm.scaffold.input.InputController;
 public class SpaceShipPlayer extends Sprite {
 
     private static final int INITIAL_BULLET_POOL_AMOUNT = 6;
+    private static final int INITIAL_BIGBULLET_POOL_AMOUNT = 1;
     private static final long TIME_BETWEEN_BULLETS = 250;
+    private static final long TIME_BETWEEN_BIGBULLETS = 3000;
     List<Bullet> bullets = new ArrayList<Bullet>();
+    List<BigBullet> bigbullets = new ArrayList<BigBullet>();
     private long timeSinceLastFire;
+    private long timeSinceLastBigFire;
+
+    private int numLifes;
 
     private int maxX;
     private int maxY;
     private double speedFactor;
-
 
     public SpaceShipPlayer(GameEngine gameEngine){
         super(gameEngine, R.drawable.ship);
@@ -26,12 +31,17 @@ public class SpaceShipPlayer extends Sprite {
         maxX = gameEngine.width - imageWidth;
         maxY = gameEngine.height - imageHeight;
 
+        numLifes = 3;
+
         initBulletPool(gameEngine);
     }
 
     private void initBulletPool(GameEngine gameEngine) {
         for (int i=0; i<INITIAL_BULLET_POOL_AMOUNT; i++) {
             bullets.add(new Bullet(gameEngine));
+        }
+        for (int i=0; i<INITIAL_BIGBULLET_POOL_AMOUNT; i++) {
+            bigbullets.add(new BigBullet(gameEngine));
         }
     }
 
@@ -46,11 +56,22 @@ public class SpaceShipPlayer extends Sprite {
         bullets.add(bullet);
     }
 
+    private BigBullet getBigBullet() {
+        if (bigbullets.isEmpty()) {
+            return null;
+        }
+        return bigbullets.remove(0);
+    }
+
+    void releaseBigBullet(BigBullet bullet) {
+        bigbullets.add(bullet);
+    }
+
 
     @Override
     public void startGame() {
         positionX = maxX / 2;
-        positionY = maxY / 2;
+        positionY = maxY - (maxY / 6);
     }
 
     @Override
@@ -78,7 +99,7 @@ public class SpaceShipPlayer extends Sprite {
     }
 
     private void checkFiring(long elapsedMillis, GameEngine gameEngine) {
-        if (gameEngine.theInputController.isFiring && timeSinceLastFire > TIME_BETWEEN_BULLETS) {
+        if (timeSinceLastFire > TIME_BETWEEN_BULLETS){//(gameEngine.theInputController.isFiring && timeSinceLastFire > TIME_BETWEEN_BULLETS) {
             Bullet bullet = getBullet();
             if (bullet == null) {
                 return;
@@ -90,6 +111,29 @@ public class SpaceShipPlayer extends Sprite {
         else {
             timeSinceLastFire += elapsedMillis;
         }
+
+        /////////////////////////////
+
+        if (gameEngine.theInputController.isFiring && timeSinceLastBigFire > TIME_BETWEEN_BIGBULLETS){//(gameEngine.theInputController.isFiring && timeSinceLastFire > TIME_BETWEEN_BULLETS) {
+            BigBullet bullet = getBigBullet();
+            if (bullet == null) {
+                return;
+            }
+            bullet.init(this, positionX + imageWidth/2, positionY);
+            gameEngine.addGameObject(bullet);
+            timeSinceLastBigFire = 0;
+        }
+        else {
+            timeSinceLastBigFire += elapsedMillis;
+        }
     }
 
+    @Override
+    public void onCollision() {
+        numLifes--;
+
+        if (numLifes == 0){
+            //TODO: Lose game
+        }
+    }
 }

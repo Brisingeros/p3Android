@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/home/brisin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/e68d079f4a414f4d76a94d10b7656f1b/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

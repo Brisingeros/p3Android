@@ -35,4 +35,9 @@ public class Bullet extends Sprite {
         positionY = initPositionY - imageHeight/2;
         parent = parentPlayer;
     }
+
+    @Override
+    public void onCollision() {
+
+    }
 }

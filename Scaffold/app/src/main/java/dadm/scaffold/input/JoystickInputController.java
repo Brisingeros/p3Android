@@ -8,7 +8,7 @@ import dadm.scaffold.R;
 public class JoystickInputController extends InputController {
 
     private float startingPositionX;
-    private float startingPositionY;
+    //private float startingPositionY;
 
     private final double maxDistance;
 
@@ -26,11 +26,11 @@ public class JoystickInputController extends InputController {
             int action = event.getActionMasked();
             if (action == MotionEvent.ACTION_DOWN) {
                 startingPositionX = event.getX(0);
-                startingPositionY = event.getY(0);
+                //startingPositionY = event.getY(0);
             }
             else if (action == MotionEvent.ACTION_UP) {
                 horizontalFactor = 0;
-                verticalFactor = 0;
+                //verticalFactor = 0;
             }
             else if (action == MotionEvent.ACTION_MOVE) {
                 // Get the proportion to the max
@@ -41,13 +41,13 @@ public class JoystickInputController extends InputController {
                 else if (horizontalFactor < -1) {
                     horizontalFactor = -1;
                 }
-                verticalFactor = (event.getY(0) - startingPositionY) / maxDistance;
+                /*verticalFactor = (event.getY(0) - startingPositionY) / maxDistance;
                 if (verticalFactor > 1) {
                     verticalFactor = 1;
                 }
                 else if (verticalFactor < -1) {
                     verticalFactor = -1;
-                }
+                }*/
             }
             return true;
         }

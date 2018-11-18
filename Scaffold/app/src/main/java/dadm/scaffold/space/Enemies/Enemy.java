@@ -15,6 +15,7 @@ public abstract class Enemy extends Ship {
         super(gameEngine, drawableRes);
 
         type = types.indexOf("enemigo");
+
     }
 
     @Override

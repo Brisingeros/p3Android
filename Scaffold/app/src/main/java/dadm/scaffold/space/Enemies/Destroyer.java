@@ -11,13 +11,23 @@ public class Destroyer extends Enemy {
     private int direction;
     private double distance;
     private double MAX_DISTANCE;
-
     private double JUMP_DISTANCE;
+    private final int MAX_ENEMIES_ROW = 6;
+
 
     private Random rnd = new Random(System.currentTimeMillis());
 
-    public Destroyer(GameEngine gameEngine) {
+    public Destroyer(GameEngine gameEngine, int posEnemy) {
         super(gameEngine, R.drawable.ship6);
+
+        if(posEnemy >= MAX_ENEMIES_ROW){
+
+            positionY = (posEnemy/MAX_ENEMIES_ROW) * (imageHeight + 20);
+            posEnemy = posEnemy - MAX_ENEMIES_ROW;
+
+        }
+
+        positionX = (imageWidth * posEnemy) + 20;
 
         MAX_DISTANCE = gameEngine.width / 6;
         JUMP_DISTANCE = gameEngine.height / 16;

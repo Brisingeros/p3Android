@@ -36,7 +36,7 @@ public abstract class Sprite extends GameObject {
         this.imageHeight = (int) (spriteDrawable.getIntrinsicHeight() * this.pixelFactor);
         this.imageWidth = (int) (spriteDrawable.getIntrinsicWidth() * this.pixelFactor);
 
-        this.collider = new float[]{this.imageWidth*0.35f, this.imageHeight*0.45f};
+        this.collider = new float[]{this.imageWidth*0.9f, this.imageHeight*0.9f};
 
         this.bitmap = ((BitmapDrawable) spriteDrawable).getBitmap();
     }
@@ -68,13 +68,13 @@ public abstract class Sprite extends GameObject {
             return false;
 
         //X axis collision
-        boolean colAbs = (this.positionX + this.collider[0] > posX - col[0]) && (this.positionX - this.collider[0] < posX + col[0]);
+        boolean colAbs = (this.positionX + this.collider[0] > posX) && (this.positionX < posX + col[0]);
 
         if (!colAbs)
             return false;
 
         //Y axis collision
-        colAbs = (this.positionY + this.collider[1] > posY - col[1]) && (this.positionY - this.collider[1] < posY + col[1]);
+        colAbs = (this.positionY > posY - col[1]) && (this.positionY - this.collider[1] < posY);
 
         return colAbs;
     }

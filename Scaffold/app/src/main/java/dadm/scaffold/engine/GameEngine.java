@@ -18,6 +18,7 @@ public class GameEngine {
     private List<GameObject> objectsToAdd = new ArrayList<GameObject>();
     private List<GameObject> objectsToRemove = new ArrayList<GameObject>();
 
+    public int numEnemy = 0;
     private UpdateThread theUpdateThread;
     private DrawThread theDrawThread;
     public InputController theInputController;
@@ -69,7 +70,6 @@ public class GameEngine {
         theDrawThread = new DrawThread(this);
         theDrawThread.start();
 
-        gameObjects.add(new Destroyer(this));
     }
 
     public void stopGame() {
@@ -138,11 +138,7 @@ public class GameEngine {
                 case 2:
                     Projectile projAux = (Projectile) aux;
 
-                    //System.out.println("EEEEEEEEEEEEEEEEEEEY");
-                    //System.out.println(projAux.getParentType());
-
                     if (projAux.getParentType() == 0){
-                        System.out.println("EEEEEEEEEEEEEEEEEEEY");
                         balasAliados.add(projAux);
                     } else {
                         balasEnemigos.add(projAux);
@@ -156,11 +152,6 @@ public class GameEngine {
 
             aux.onUpdate(elapsedMillis,this);
         }
-
-        //System.out.println("Aliados: " + aliados.size());
-        //System.out.println("Enemigos: " + enemigos.size());
-        System.out.println("Balas: " + balasAliados.size());
-        //System.out.println(balasEnemigos.size());
 
         for (Ship s: aliados) {
             for (Projectile p: balasEnemigos) {

@@ -10,6 +10,7 @@ public class Pawn extends Enemy {
         super(gameEngine, R.drawable.ship3);
 
         numLifes = 1;
+
     }
 
     @Override

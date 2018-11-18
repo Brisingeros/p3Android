@@ -14,6 +14,7 @@ public class Explosion extends Sprite {
         super(gameEngine, R.drawable.explosion);
 
         elapsedTime = 0;
+        type = -1;
     }
 
     @Override

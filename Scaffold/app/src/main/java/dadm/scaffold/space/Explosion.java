@@ -38,12 +38,7 @@ public class Explosion extends Sprite {
     }
 
     @Override
-    public boolean isColliding() {
-        return false;
-    }
-
-    @Override
-    public void onCollision(Sprite sprite) {
+    public void onCollision(GameEngine gameEngine) {
 
     }
 }

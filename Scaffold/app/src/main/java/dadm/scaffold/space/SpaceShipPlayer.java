@@ -12,16 +12,9 @@ public class SpaceShipPlayer extends Ship {
 
     private static final long TIME_BETWEEN_BULLETS = 250;
     private static final long TIME_BETWEEN_BIGBULLETS = 3000;
-    List<Bullet> bullets = new ArrayList<Bullet>();
-    List<BigBullet> bigbullets = new ArrayList<BigBullet>();
+
     private long timeSinceLastFire;
     private long timeSinceLastBigFire;
-
-    private int numLifes;
-
-    private int maxX;
-    private int maxY;
-    private double speedFactor;
 
     public SpaceShipPlayer(GameEngine gameEngine){
         super(gameEngine, R.drawable.ship);
@@ -29,17 +22,17 @@ public class SpaceShipPlayer extends Ship {
         maxX = gameEngine.width - imageWidth;
         maxY = gameEngine.height - imageHeight;
 
-        type = types.indexOf("jugador ");
+        type = types.indexOf("jugador");
         numLifes = 3;
 
         if(type != -1)
             initBulletPool(gameEngine);
     }
 
-    private void initBulletPool(GameEngine gameEngine) {
+    protected void initBulletPool(GameEngine gameEngine) {
 
-        bullets = new ArrayList<Bullet>();
-        bigbullets = new ArrayList<BigBullet>();
+        bullets = new ArrayList<>();
+        bigbullets = new ArrayList<>();
 
         for (int i=0; i<INITIAL_BULLET_POOL_AMOUNT; i++) {
             bullets.add(new Bullet(gameEngine));
@@ -111,12 +104,7 @@ public class SpaceShipPlayer extends Ship {
     }
 
     @Override
-    public boolean isColliding() {
-        return false;
-    }
-
-    @Override
-    public void onCollision(Sprite sprite) {
+    public void onCollision(GameEngine gameEngine) {
         numLifes--;
 
         if (numLifes == 0){

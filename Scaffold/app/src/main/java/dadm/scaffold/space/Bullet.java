@@ -29,8 +29,8 @@ public class Bullet extends Projectile {
     }
 
     @Override
-    public boolean isColliding() {
-        return false;
+    public void onCollision(GameEngine gameEngine) {
+        parent.releaseBullet(this, "bullet");
+        gameEngine.removeGameObject(this);
     }
-
 }

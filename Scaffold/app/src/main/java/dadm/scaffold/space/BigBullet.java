@@ -6,14 +6,11 @@ import dadm.scaffold.engine.Sprite;
 
 public class BigBullet extends Projectile {
 
-    private double elapsedTime;
-
     public BigBullet(GameEngine gameEngine){
         super(gameEngine, R.drawable.special_shoot);
 
         this.speedFactor = gameEngine.pixelFactor * -300d / 2000d;
         elapsedTime = 0;
-
     }
 
     @Override
@@ -23,7 +20,7 @@ public class BigBullet extends Projectile {
     public void onUpdate(long elapsedMillis, GameEngine gameEngine) {
         positionY += speedFactor * elapsedMillis;
 
-        if ((elapsedTime > 250 && gameEngine.theInputController.isFiring) || (colisionado)){
+        if ((elapsedTime > 250 && gameEngine.theInputController.isFiring)){
             explode(gameEngine);
         }
         if (positionY < -imageHeight) {
@@ -36,13 +33,8 @@ public class BigBullet extends Projectile {
     }
 
     @Override
-    public boolean isColliding() {
-        return false;
-    }
-
-    @Override
-    public void onCollision(Sprite sprite) {
-        this.colisionado = true;
+    public void onCollision(GameEngine gameEngine) {
+        explode(gameEngine);
     }
 
     public void explode(GameEngine gameEngine){

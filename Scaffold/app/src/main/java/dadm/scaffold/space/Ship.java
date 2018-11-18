@@ -14,13 +14,21 @@ public abstract class Ship extends Sprite {
     protected List<Bullet> bullets;
     protected List<BigBullet> bigbullets;
 
+    protected int numLifes;
+
+    protected int maxX;
+    protected int maxY;
+    protected double speedFactor;
+
     protected Ship(GameEngine gameEngine, int drawableRes) {
         super(gameEngine, drawableRes);
     }
 
+    protected abstract void initBulletPool(GameEngine gameEngine);
+
     protected Projectile getBullet(String type) {
 
-        List aux = null;
+        List aux = new ArrayList();
 
         switch (type){
             case "bullet":
@@ -32,6 +40,7 @@ public abstract class Ship extends Sprite {
                 break;
 
             case "diagonalbullet":
+                aux = bullets;
                 break;
         }
 

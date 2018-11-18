@@ -5,15 +5,14 @@ import dadm.scaffold.engine.Sprite;
 
 public abstract class Projectile extends Sprite {
 
-    protected boolean colisionado;
     protected double speedFactor;
+    protected double elapsedTime;
 
     protected Ship parent;
 
     protected Projectile(GameEngine gameEngine, int drawableRes) {
         super(gameEngine, drawableRes);
 
-        colisionado = false;
         type = types.indexOf("disparo");
     }
 
@@ -21,11 +20,7 @@ public abstract class Projectile extends Sprite {
         positionX = initPositionX - imageWidth/2;
         positionY = initPositionY - imageHeight/2;
         parent = parentPlayer;
-        //elapsedTime = 0;
+        elapsedTime = 0;
     }
 
-    @Override
-    public void onCollision(Sprite sprite) {
-        this.colisionado = true;
-    }
 }

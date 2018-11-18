@@ -1,164 +1,164 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\28c43fe037f6f4a2ee8e9b7bccb96eeb\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\8a7ff339de1673d994059be239e21567\AndroidManifest.xml:2:1-11:12
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\b0481004af553f0c4cf47edd4102ae7c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\1d82e21bb8c63330b8b80c09e3bbf5db\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\17cf6145e490930a1a8a7a0de56d8bd2\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\9f73aebaca610e46f1cee751968b3979\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\d88d6777c2f8ecae73f6d758a0d58c0b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\145a9b9fde1d7c71928dd703f1d106de\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\2b1138b049fa85b0fa14778f95ee17e7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\1ce461998d4741146fee911a6cf29723\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\bceb5d34b176c92c59e337a5b8c2365c\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\6537c69c030bc284afe7e0d25bf30b6b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\d9c7a154bad676c8f35712964ecd89c8\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\3088e92290fc4fe2d2f5af966902bf29\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\3ccf1e93c16930805f19459904df94f5\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\05ce10468e046152b5d251ca6371c9be\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\2bf823a72943dd74072c2a34d130b995\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\6fddc1e0e421944e15edca250a79c7df\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\235122eeb1257f6cc1a6aa7b176eeaa9\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\02e0de35767ce882f7ce2ae7c48c498f\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\7a44143be2a60191b1168f5791d4a5f7\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\5e86feae46c65f414e8872bc1022e5f5\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\5f0594f6e1a7ef6ef34be5f11bac6e65\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\ef4a5fa0754aa1ebd7933948d5fe7eb6\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\d41209aa7b7cccf34db928fe3f508546\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\b686c9b616e33feb4d1e6f3df4446f43\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\12802301e08a4964c68cffc4e5cfa97b\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\b316d3d4cb136c2e4a45d0ab17debf03\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\dc56e92d79dc7792922b38e9c8a89719\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
+ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:2:1-22:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/e68d079f4a414f4d76a94d10b7656f1b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/brisin/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/528f1a9b714296e024726a2f9f9efa28/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/9ba9930f9480eb1ec69a8e70793b922f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/b23ad2fd7f2c3693171fc8a7d74f47dd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/28cf40afe9ebccba7a46430d9d54cce4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/bd12ad6a400f1e50a80969583967876c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/89df156b86137b613d99606513ce3f5a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/5b1bf3aa866ea68ae23ee06674889c2a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/23881dfed7b5de9606e880c270d5c2ff/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/165563d3c6bc52a88cc3d330b6f42799/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/2a06520df7da179c873f0d3595039ddc/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/d6bcda34ff2211eb98a217eacf222c54/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/2832b0bf65e6b1ce87d80c1a159a487c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/563221665bbc23ffec63c525cbd7d31d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/31538dcdcff6a97f0b60766ca7e3abec/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/ffd9763538fe1402025adbb6ca9944e1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/b1c31c981a3c0cb5007cdf85d3a7eb66/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/0526557eb9fa1743484852df873e2e8d/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/eca5acba8dc484938bcab050d15540c9/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/854fa3b5f9b7d7513ea77db228928ddb/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/brisin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/036bad21e8b0c432dd34c16d7defa386/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/5e3f0204bd74104d81927b6b2bcf65b5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/2521f8d80631d2a2a33903fec558c576/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/0b689440b918e7cd736902d109dfd6e5/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/brisin/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/621f1be744abab84d97fcb2be75482c3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/539b7ea7a6b2789c35a66d6f9ff46c27/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/brisin/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/55fe8f3f4601bfded98b899078fc9547/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/brisin/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/83565b4f1b20b0ea8fe0fe9c44e5a156/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/brisin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/fadd6983ed228f094fb978e52c004658/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:2:1-22:12
 	package
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:3:5-28
-		INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:3:5-28
+		INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml
+		INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
-		INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:2:1-22:12
+		INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
-		INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:2:1-22:12
+		INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:5:5-20:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\8a7ff339de1673d994059be239e21567\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\8a7ff339de1673d994059be239e21567\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\6fddc1e0e421944e15edca250a79c7df\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\6fddc1e0e421944e15edca250a79c7df\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\235122eeb1257f6cc1a6aa7b176eeaa9\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\235122eeb1257f6cc1a6aa7b176eeaa9\AndroidManifest.xml:22:5-23:19
+ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:5:5-20:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/brisin/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/528f1a9b714296e024726a2f9f9efa28/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/brisin/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/528f1a9b714296e024726a2f9f9efa28/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/0526557eb9fa1743484852df873e2e8d/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/0526557eb9fa1743484852df873e2e8d/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/eca5acba8dc484938bcab050d15540c9/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/eca5acba8dc484938bcab050d15540c9/AndroidManifest.xml:22:5-23:19
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\6fddc1e0e421944e15edca250a79c7df\AndroidManifest.xml:22:18-91
+		ADDED from [com.android.support:support-compat:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/0526557eb9fa1743484852df873e2e8d/AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:11:9-40
 activity#dadm.scaffold.ScaffoldActivity
-ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:12:9-19:20
+ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:12:9-19:20
 	android:screenOrientation
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:13:13-55
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:13:13-55
 	android:label
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:14:13-56
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:14:13-56
 	android:name
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:12:19-51
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:12:19-51
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:15:13-18:29
+ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:15:13-18:29
 action#android.intent.action.MAIN
-ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:16:17-69
+ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:16:17-69
 	android:name
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:16:25-66
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:17:17-77
+ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:17:17-77
 	android:name
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:17:27-74
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml:17:27-74
 uses-sdk
-INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\28c43fe037f6f4a2ee8e9b7bccb96eeb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\28c43fe037f6f4a2ee8e9b7bccb96eeb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\8a7ff339de1673d994059be239e21567\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\8a7ff339de1673d994059be239e21567\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\b0481004af553f0c4cf47edd4102ae7c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\b0481004af553f0c4cf47edd4102ae7c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\1d82e21bb8c63330b8b80c09e3bbf5db\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\1d82e21bb8c63330b8b80c09e3bbf5db\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\17cf6145e490930a1a8a7a0de56d8bd2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\17cf6145e490930a1a8a7a0de56d8bd2\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\9f73aebaca610e46f1cee751968b3979\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\9f73aebaca610e46f1cee751968b3979\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\d88d6777c2f8ecae73f6d758a0d58c0b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\d88d6777c2f8ecae73f6d758a0d58c0b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\145a9b9fde1d7c71928dd703f1d106de\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\145a9b9fde1d7c71928dd703f1d106de\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\2b1138b049fa85b0fa14778f95ee17e7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\2b1138b049fa85b0fa14778f95ee17e7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\1ce461998d4741146fee911a6cf29723\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\1ce461998d4741146fee911a6cf29723\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\bceb5d34b176c92c59e337a5b8c2365c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\bceb5d34b176c92c59e337a5b8c2365c\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\6537c69c030bc284afe7e0d25bf30b6b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\6537c69c030bc284afe7e0d25bf30b6b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\d9c7a154bad676c8f35712964ecd89c8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\d9c7a154bad676c8f35712964ecd89c8\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\3088e92290fc4fe2d2f5af966902bf29\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\3088e92290fc4fe2d2f5af966902bf29\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\3ccf1e93c16930805f19459904df94f5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\3ccf1e93c16930805f19459904df94f5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\05ce10468e046152b5d251ca6371c9be\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\05ce10468e046152b5d251ca6371c9be\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\2bf823a72943dd74072c2a34d130b995\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\2bf823a72943dd74072c2a34d130b995\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\6fddc1e0e421944e15edca250a79c7df\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\6fddc1e0e421944e15edca250a79c7df\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\235122eeb1257f6cc1a6aa7b176eeaa9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\235122eeb1257f6cc1a6aa7b176eeaa9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\02e0de35767ce882f7ce2ae7c48c498f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\02e0de35767ce882f7ce2ae7c48c498f\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\7a44143be2a60191b1168f5791d4a5f7\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\7a44143be2a60191b1168f5791d4a5f7\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\5e86feae46c65f414e8872bc1022e5f5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\5e86feae46c65f414e8872bc1022e5f5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\5f0594f6e1a7ef6ef34be5f11bac6e65\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\5f0594f6e1a7ef6ef34be5f11bac6e65\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\ef4a5fa0754aa1ebd7933948d5fe7eb6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\ef4a5fa0754aa1ebd7933948d5fe7eb6\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\d41209aa7b7cccf34db928fe3f508546\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\d41209aa7b7cccf34db928fe3f508546\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\b686c9b616e33feb4d1e6f3df4446f43\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\b686c9b616e33feb4d1e6f3df4446f43\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\12802301e08a4964c68cffc4e5cfa97b\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\12802301e08a4964c68cffc4e5cfa97b\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\b316d3d4cb136c2e4a45d0ab17debf03\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\b316d3d4cb136c2e4a45d0ab17debf03\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\dc56e92d79dc7792922b38e9c8a89719\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Brisin\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\dc56e92d79dc7792922b38e9c8a89719\AndroidManifest.xml:20:5-44
-INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml
+INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/e68d079f4a414f4d76a94d10b7656f1b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/e68d079f4a414f4d76a94d10b7656f1b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/brisin/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/528f1a9b714296e024726a2f9f9efa28/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/brisin/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/528f1a9b714296e024726a2f9f9efa28/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/9ba9930f9480eb1ec69a8e70793b922f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0.aar/9ba9930f9480eb1ec69a8e70793b922f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/b23ad2fd7f2c3693171fc8a7d74f47dd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/b23ad2fd7f2c3693171fc8a7d74f47dd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/28cf40afe9ebccba7a46430d9d54cce4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/28cf40afe9ebccba7a46430d9d54cce4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/bd12ad6a400f1e50a80969583967876c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/bd12ad6a400f1e50a80969583967876c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/89df156b86137b613d99606513ce3f5a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/89df156b86137b613d99606513ce3f5a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/5b1bf3aa866ea68ae23ee06674889c2a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/5b1bf3aa866ea68ae23ee06674889c2a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/23881dfed7b5de9606e880c270d5c2ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-media-compat-28.0.0.aar/23881dfed7b5de9606e880c270d5c2ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/165563d3c6bc52a88cc3d330b6f42799/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/165563d3c6bc52a88cc3d330b6f42799/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/2a06520df7da179c873f0d3595039ddc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/2a06520df7da179c873f0d3595039ddc/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/d6bcda34ff2211eb98a217eacf222c54/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/d6bcda34ff2211eb98a217eacf222c54/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/2832b0bf65e6b1ce87d80c1a159a487c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/2832b0bf65e6b1ce87d80c1a159a487c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/563221665bbc23ffec63c525cbd7d31d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/563221665bbc23ffec63c525cbd7d31d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/31538dcdcff6a97f0b60766ca7e3abec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/31538dcdcff6a97f0b60766ca7e3abec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/ffd9763538fe1402025adbb6ca9944e1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/ffd9763538fe1402025adbb6ca9944e1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/b1c31c981a3c0cb5007cdf85d3a7eb66/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/b1c31c981a3c0cb5007cdf85d3a7eb66/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/0526557eb9fa1743484852df873e2e8d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/0526557eb9fa1743484852df873e2e8d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/eca5acba8dc484938bcab050d15540c9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/eca5acba8dc484938bcab050d15540c9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/854fa3b5f9b7d7513ea77db228928ddb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/854fa3b5f9b7d7513ea77db228928ddb/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/brisin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/036bad21e8b0c432dd34c16d7defa386/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/brisin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/036bad21e8b0c432dd34c16d7defa386/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/5e3f0204bd74104d81927b6b2bcf65b5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/5e3f0204bd74104d81927b6b2bcf65b5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/2521f8d80631d2a2a33903fec558c576/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/2521f8d80631d2a2a33903fec558c576/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/0b689440b918e7cd736902d109dfd6e5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/0b689440b918e7cd736902d109dfd6e5/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/brisin/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/621f1be744abab84d97fcb2be75482c3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/brisin/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/621f1be744abab84d97fcb2be75482c3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/539b7ea7a6b2789c35a66d6f9ff46c27/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/brisin/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/539b7ea7a6b2789c35a66d6f9ff46c27/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/brisin/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/55fe8f3f4601bfded98b899078fc9547/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/brisin/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/55fe8f3f4601bfded98b899078fc9547/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/brisin/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/83565b4f1b20b0ea8fe0fe9c44e5a156/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/brisin/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/83565b4f1b20b0ea8fe0fe9c44e5a156/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/brisin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/fadd6983ed228f094fb978e52c004658/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/brisin/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/fadd6983ed228f094fb978e52c004658/AndroidManifest.xml:20:5-44
+INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml
+INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml
+		INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-		ADDED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Git\Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml
+		ADDED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml
+		INJECTED from /home/brisin/RepositoriosClase/p3Android/Scaffold/app/src/main/AndroidManifest.xml

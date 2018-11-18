@@ -1,35 +1,26 @@
 package dadm.scaffold.space.Enemies;
 
+import java.util.Random;
+
 import dadm.scaffold.engine.GameEngine;
 import dadm.scaffold.engine.Sprite;
+import dadm.scaffold.space.Ship;
 
-public abstract class Enemy extends Sprite {
+public abstract class Enemy extends Ship {
 
-    protected static final int INITIAL_BULLET_POOL_AMOUNT = 6;
     protected long timeSinceLastFire;
-
-    protected double speedFactor;
 
     protected Enemy(GameEngine gameEngine, int drawableRes) {
         super(gameEngine, drawableRes);
     }
 
     @Override
-    public boolean isColliding() {
-        return false;
-    }
+    public void onCollision(GameEngine gameEngine) {
+        numLifes--;
 
-    @Override
-    public void onCollision(Sprite sprite) {
-
-        //if(sprite.getType() == 2 && sprite.pa)
-    }
-
-    @Override
-    public void onUpdate(long elapsedMillis, GameEngine gameEngine) {
+        if (numLifes == 0)
+            gameEngine.removeGameObject(this);
 
     }
-
-    public abstract void shoot();
 
 }

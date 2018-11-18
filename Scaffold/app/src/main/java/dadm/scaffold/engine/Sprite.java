@@ -86,9 +86,7 @@ public abstract class Sprite extends GameObject {
         return colAbs;
     }
 
-    public abstract boolean isColliding();
-
-    public abstract void onCollision(Sprite sprite);
+    public abstract void onCollision(GameEngine gameEngine);
 
     public double getPositionX() {
         return positionX;

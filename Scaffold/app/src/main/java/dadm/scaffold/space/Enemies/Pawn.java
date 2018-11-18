@@ -1,16 +1,27 @@
 package dadm.scaffold.space.Enemies;
 
+import dadm.scaffold.PerlinNoise;
 import dadm.scaffold.R;
 import dadm.scaffold.engine.GameEngine;
 import dadm.scaffold.input.InputController;
 
 public class Pawn extends Enemy {
 
-    protected Pawn(GameEngine gameEngine) {
-        super(gameEngine, R.drawable.ship3);
+    public int toGo;
+    public boolean toChange;
 
+    private PerlinNoise rail;
+
+    public Pawn(GameEngine gameEngine, PerlinNoise perlin, float offsetY) {
+        super(gameEngine, R.drawable.ship3);
         numLifes = 1;
 
+        speedFactor = pixelFactor * 100d / 3000d;
+        positionY = offsetY;
+
+        rail = perlin;
+        toGo = 0;
+        toChange = false;
     }
 
     @Override
@@ -20,7 +31,8 @@ public class Pawn extends Enemy {
 
     @Override
     protected void updatePosition(long elapsedMillis, InputController inputController) {
-
+        positionY += elapsedMillis * speedFactor;
+        positionX = rail.getValue((float) (positionY + 600.0f), this);
     }
 
     @Override
@@ -35,6 +47,11 @@ public class Pawn extends Enemy {
 
     @Override
     public void onUpdate(long elapsedMillis, GameEngine gameEngine) {
+        updatePosition(elapsedMillis, gameEngine.theInputController);
+        checkFiring(elapsedMillis, gameEngine);
 
+        if (positionY > maxY){
+            gameEngine.removeGameObject(this);
+        }
     }
 }

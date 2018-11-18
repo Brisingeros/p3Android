@@ -10,6 +10,7 @@ import android.view.ViewTreeObserver;
 import android.widget.Button;
 
 import dadm.scaffold.BaseFragment;
+import dadm.scaffold.PerlinNoise;
 import dadm.scaffold.R;
 import dadm.scaffold.ScaffoldActivity;
 import dadm.scaffold.engine.FramesPerSecondCounter;
@@ -17,6 +18,7 @@ import dadm.scaffold.engine.GameEngine;
 import dadm.scaffold.engine.GameView;
 import dadm.scaffold.input.JoystickInputController;
 import dadm.scaffold.space.Enemies.Destroyer;
+import dadm.scaffold.space.Enemies.Pawn;
 import dadm.scaffold.space.SpaceShipPlayer;
 
 
@@ -48,8 +50,17 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
                 theGameEngine = new GameEngine(getActivity(), gameView);
                 theGameEngine.setTheInputController(new JoystickInputController(getView()));
 
+                //TODO: Set in GameEngine
                 for(int i = 0; i < 12; i++){
                     theGameEngine.addGameObject(new Destroyer(theGameEngine,i));
+                }
+
+                int offset = -600;
+                int distanceBetween = 70;
+                PerlinNoise perl = new PerlinNoise(theGameEngine);
+
+                for (int j = 0; j < 5; j++){
+                    theGameEngine.addGameObject(new Pawn(theGameEngine, perl, (offset + j*distanceBetween)));
                 }
 
                 theGameEngine.addGameObject(new SpaceShipPlayer(theGameEngine));

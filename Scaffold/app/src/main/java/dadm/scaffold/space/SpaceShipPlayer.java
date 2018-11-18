@@ -108,7 +108,8 @@ public class SpaceShipPlayer extends Ship {
         numLifes--;
 
         if (numLifes == 0){
-            //TODO: Lose game
+            //TODO: End game
+            gameEngine.removeGameObject(this);
         }
     }
 }

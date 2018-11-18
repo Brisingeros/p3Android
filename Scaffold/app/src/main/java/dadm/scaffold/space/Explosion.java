@@ -4,7 +4,7 @@ import dadm.scaffold.R;
 import dadm.scaffold.engine.GameEngine;
 import dadm.scaffold.engine.Sprite;
 
-public class Explosion extends Sprite {
+public class Explosion extends Projectile {
 
     private SpaceShipPlayer parent;
 
@@ -14,7 +14,6 @@ public class Explosion extends Sprite {
         super(gameEngine, R.drawable.explosion);
 
         elapsedTime = 0;
-        type = -1;
     }
 
     @Override

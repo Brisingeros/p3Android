@@ -19,6 +19,7 @@ public class BigBullet extends Sprite {
         colisionado = false;
         speedFactor = gameEngine.pixelFactor * -300d / 2000d;
         elapsedTime = 0;
+        type = types.indexOf("disparo")
     }
 
     @Override
@@ -49,7 +50,12 @@ public class BigBullet extends Sprite {
     }
 
     @Override
-    public void onCollision() {
+    public boolean isColliding() {
+        return false;
+    }
+
+    @Override
+    public void onCollision(Sprite sprite) {
         this.colisionado = true;
     }
 

@@ -38,7 +38,12 @@ public class Explosion extends Sprite {
     }
 
     @Override
-    public void onCollision() {
+    public boolean isColliding() {
+        return false;
+    }
+
+    @Override
+    public void onCollision(Sprite sprite) {
 
     }
 }

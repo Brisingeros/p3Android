@@ -7,6 +7,9 @@ import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Sprite extends GameObject {
 
     protected double positionX;
@@ -19,6 +22,10 @@ public abstract class Sprite extends GameObject {
     protected final int imageHeight;
     protected final int imageWidth;
 
+    protected int type;
+    protected List<String> types = new ArrayList<>(); //jugador, enemigo, disparo
+
+
     protected float[] collider;
 
     private final Matrix matrix = new Matrix();
@@ -26,6 +33,10 @@ public abstract class Sprite extends GameObject {
     protected Sprite (GameEngine gameEngine, int drawableRes) {
         Resources r = gameEngine.getContext().getResources();
         Drawable spriteDrawable = r.getDrawable(drawableRes);
+
+        this.types.add("jugador");
+        this.types.add("enemigo");
+        this.types.add("disparo");
 
         this.pixelFactor = gameEngine.pixelFactor;
 
@@ -52,7 +63,7 @@ public abstract class Sprite extends GameObject {
         canvas.drawBitmap(bitmap, matrix, null);
     }
 
-    public boolean isColliding(Sprite spr){
+    public boolean collisionAABB(Sprite spr){
 
         double posX = spr.getPositionX();
         double posY = spr.getPositionY();
@@ -75,7 +86,9 @@ public abstract class Sprite extends GameObject {
         return colAbs;
     }
 
-    public abstract void onCollision();
+    public abstract boolean isColliding();
+
+    public abstract void onCollision(Sprite sprite);
 
     public double getPositionX() {
         return positionX;
@@ -87,5 +100,9 @@ public abstract class Sprite extends GameObject {
 
     public float[] getCollider() {
         return collider;
+    }
+
+    public int getType(){
+        return type;
     }
 }

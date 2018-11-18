@@ -31,9 +31,11 @@ public class SpaceShipPlayer extends Sprite {
         maxX = gameEngine.width - imageWidth;
         maxY = gameEngine.height - imageHeight;
 
+        type = types.indexOf("jugador ");
         numLifes = 3;
 
-        initBulletPool(gameEngine);
+        if(type != -1)
+            initBulletPool(gameEngine);
     }
 
     private void initBulletPool(GameEngine gameEngine) {
@@ -129,7 +131,12 @@ public class SpaceShipPlayer extends Sprite {
     }
 
     @Override
-    public void onCollision() {
+    public boolean isColliding() {
+        return false;
+    }
+
+    @Override
+    public void onCollision(Sprite sprite) {
         numLifes--;
 
         if (numLifes == 0){

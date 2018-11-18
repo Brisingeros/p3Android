@@ -14,6 +14,7 @@ public class Bullet extends Sprite {
         super(gameEngine, R.drawable.bullet);
 
         speedFactor = gameEngine.pixelFactor * -300d / 1000d;
+        type = types.indexOf("disparo");
     }
 
     @Override
@@ -37,7 +38,12 @@ public class Bullet extends Sprite {
     }
 
     @Override
-    public void onCollision() {
+    public boolean isColliding() {
+        return false;
+    }
+
+    @Override
+    public void onCollision(Sprite sprite) {
 
     }
 }

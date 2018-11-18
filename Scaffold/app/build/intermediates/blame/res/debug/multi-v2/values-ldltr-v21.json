@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
+            "outputFile": "E:\\Laura\\Universidad\\Curso 4\\Desarrollo de Aplicaciones para Android\\p3Android\\Scaffold\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "/home/brisin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/e68d079f4a414f4d76a94d10b7656f1b/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "source": "C:\\Users\\Laura\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\44775c2ed9d419d4d2404be85bf46dcb\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

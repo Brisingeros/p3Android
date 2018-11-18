@@ -20,12 +20,15 @@ public class Bullet extends Projectile {
 
     @Override
     public void onUpdate(long elapsedMillis, GameEngine gameEngine) {
-        positionY += speedFactor * elapsedMillis;
-        if (positionY < -imageHeight) {
-            gameEngine.removeGameObject(this);
-            // And return it to the pool
-            parent.releaseBullet(this, "bullet");
-        }
+
+        positionY += speedFactor * elapsedMillis * factor;
+
+            if((positionY > gameEngine.height) || (positionY < -imageHeight)){
+                gameEngine.removeGameObject(this);
+                // And return it to the pool
+                parent.releaseBullet(this, "bullet");
+            }
+
     }
 
     @Override

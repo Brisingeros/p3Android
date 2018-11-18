@@ -22,7 +22,7 @@ public abstract class Enemy extends Sprite {
     @Override
     public void onCollision(Sprite sprite) {
 
-        if(sprite.getType() == 2 && sprite.pa)
+        //if(sprite.getType() == 2 && sprite.pa)
     }
 
     @Override

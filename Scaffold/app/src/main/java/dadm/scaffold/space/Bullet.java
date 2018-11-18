@@ -4,11 +4,9 @@ import dadm.scaffold.R;
 import dadm.scaffold.engine.GameEngine;
 import dadm.scaffold.engine.Sprite;
 
-public class Bullet extends Sprite {
+public class Bullet extends Projectile {
 
     private double speedFactor;
-
-    private SpaceShipPlayer parent;
 
     public Bullet(GameEngine gameEngine){
         super(gameEngine, R.drawable.bullet);
@@ -26,15 +24,8 @@ public class Bullet extends Sprite {
         if (positionY < -imageHeight) {
             gameEngine.removeGameObject(this);
             // And return it to the pool
-            parent.releaseBullet(this);
+            parent.releaseBullet(this, "bullet");
         }
-    }
-
-
-    public void init(SpaceShipPlayer parentPlayer, double initPositionX, double initPositionY) {
-        positionX = initPositionX - imageWidth/2;
-        positionY = initPositionY - imageHeight/2;
-        parent = parentPlayer;
     }
 
     @Override
@@ -42,8 +33,4 @@ public class Bullet extends Sprite {
         return false;
     }
 
-    @Override
-    public void onCollision(Sprite sprite) {
-
-    }
 }

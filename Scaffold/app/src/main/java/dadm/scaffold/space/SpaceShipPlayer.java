@@ -8,10 +8,8 @@ import dadm.scaffold.engine.GameEngine;
 import dadm.scaffold.engine.Sprite;
 import dadm.scaffold.input.InputController;
 
-public class SpaceShipPlayer extends Sprite {
+public class SpaceShipPlayer extends Ship {
 
-    private static final int INITIAL_BULLET_POOL_AMOUNT = 6;
-    private static final int INITIAL_BIGBULLET_POOL_AMOUNT = 1;
     private static final long TIME_BETWEEN_BULLETS = 250;
     private static final long TIME_BETWEEN_BIGBULLETS = 3000;
     List<Bullet> bullets = new ArrayList<Bullet>();
@@ -39,34 +37,16 @@ public class SpaceShipPlayer extends Sprite {
     }
 
     private void initBulletPool(GameEngine gameEngine) {
+
+        bullets = new ArrayList<Bullet>();
+        bigbullets = new ArrayList<BigBullet>();
+
         for (int i=0; i<INITIAL_BULLET_POOL_AMOUNT; i++) {
             bullets.add(new Bullet(gameEngine));
         }
         for (int i=0; i<INITIAL_BIGBULLET_POOL_AMOUNT; i++) {
             bigbullets.add(new BigBullet(gameEngine));
         }
-    }
-
-    private Bullet getBullet() {
-        if (bullets.isEmpty()) {
-            return null;
-        }
-        return bullets.remove(0);
-    }
-
-    void releaseBullet(Bullet bullet) {
-        bullets.add(bullet);
-    }
-
-    private BigBullet getBigBullet() {
-        if (bigbullets.isEmpty()) {
-            return null;
-        }
-        return bigbullets.remove(0);
-    }
-
-    void releaseBigBullet(BigBullet bullet) {
-        bigbullets.add(bullet);
     }
 
 
@@ -102,7 +82,7 @@ public class SpaceShipPlayer extends Sprite {
 
     private void checkFiring(long elapsedMillis, GameEngine gameEngine) {
         if (timeSinceLastFire > TIME_BETWEEN_BULLETS){//(gameEngine.theInputController.isFiring && timeSinceLastFire > TIME_BETWEEN_BULLETS) {
-            Bullet bullet = getBullet();
+            Bullet bullet = (Bullet) getBullet("bullet");
             if (bullet == null) {
                 return;
             }
@@ -117,7 +97,7 @@ public class SpaceShipPlayer extends Sprite {
         /////////////////////////////
 
         if (gameEngine.theInputController.isFiring && timeSinceLastBigFire > TIME_BETWEEN_BIGBULLETS){//(gameEngine.theInputController.isFiring && timeSinceLastFire > TIME_BETWEEN_BULLETS) {
-            BigBullet bullet = getBigBullet();
+            BigBullet bullet = (BigBullet) getBullet("bigbullet");
             if (bullet == null) {
                 return;
             }

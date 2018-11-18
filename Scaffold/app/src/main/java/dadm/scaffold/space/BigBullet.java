@@ -4,22 +4,16 @@ import dadm.scaffold.R;
 import dadm.scaffold.engine.GameEngine;
 import dadm.scaffold.engine.Sprite;
 
-public class BigBullet extends Sprite {
+public class BigBullet extends Projectile {
 
-    private double speedFactor;
     private double elapsedTime;
-
-    private boolean colisionado;
-
-    private SpaceShipPlayer parent;
 
     public BigBullet(GameEngine gameEngine){
         super(gameEngine, R.drawable.special_shoot);
 
-        colisionado = false;
-        speedFactor = gameEngine.pixelFactor * -300d / 2000d;
+        this.speedFactor = gameEngine.pixelFactor * -300d / 2000d;
         elapsedTime = 0;
-        type = types.indexOf("disparo")
+
     }
 
     @Override
@@ -35,18 +29,10 @@ public class BigBullet extends Sprite {
         if (positionY < -imageHeight) {
             gameEngine.removeGameObject(this);
             // And return it to the pool
-            parent.releaseBigBullet(this);
+            parent.releaseBullet(this, "bigbullet");
         }
 
         elapsedTime += elapsedMillis;
-    }
-
-
-    public void init(SpaceShipPlayer parentPlayer, double initPositionX, double initPositionY) {
-        positionX = initPositionX - imageWidth/2;
-        positionY = initPositionY - imageHeight/2;
-        parent = parentPlayer;
-        elapsedTime = 0;
     }
 
     @Override
@@ -66,6 +52,6 @@ public class BigBullet extends Sprite {
         explode.init(this.positionX + imageWidth/2, this.positionY);
         gameEngine.addGameObject(explode);
         // And return it to the pool
-        parent.releaseBigBullet(this);
+        parent.releaseBullet(this, "bigbullet");
     }
 }

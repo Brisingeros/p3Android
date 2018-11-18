@@ -2,6 +2,7 @@ package dadm.scaffold.space.Enemies;
 
 import dadm.scaffold.R;
 import dadm.scaffold.engine.GameEngine;
+import dadm.scaffold.input.InputController;
 
 public class Pawn extends Enemy {
 
@@ -13,6 +14,16 @@ public class Pawn extends Enemy {
 
     @Override
     protected void initBulletPool(GameEngine gameEngine) {
+
+    }
+
+    @Override
+    protected void updatePosition(long elapsedMillis, InputController inputController) {
+
+    }
+
+    @Override
+    protected void checkFiring(long elapsedMillis, GameEngine gameEngine) {
 
     }
 

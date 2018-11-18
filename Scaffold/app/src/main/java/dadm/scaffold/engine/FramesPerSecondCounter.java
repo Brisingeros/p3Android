@@ -22,6 +22,8 @@ public class FramesPerSecondCounter extends GameObject {
         textHeight = (float) (25 * gameEngine.pixelFactor);
         textWidth = (float) (50 * gameEngine.pixelFactor);
         paint.setTextSize(textHeight / 2);
+
+        type = -1;
     }
 
     @Override

@@ -5,6 +5,7 @@ import java.util.List;
 
 import dadm.scaffold.engine.GameEngine;
 import dadm.scaffold.engine.Sprite;
+import dadm.scaffold.input.InputController;
 
 public abstract class Ship extends Sprite {
 
@@ -22,6 +23,9 @@ public abstract class Ship extends Sprite {
 
     protected Ship(GameEngine gameEngine, int drawableRes) {
         super(gameEngine, drawableRes);
+
+        maxX = gameEngine.width - imageWidth;
+        maxY = gameEngine.height - imageHeight;
     }
 
     protected abstract void initBulletPool(GameEngine gameEngine);
@@ -66,5 +70,8 @@ public abstract class Ship extends Sprite {
         }
 
     }
+
+    protected abstract void updatePosition(long elapsedMillis, InputController inputController);
+    protected abstract void checkFiring(long elapsedMillis, GameEngine gameEngine);
 
 }

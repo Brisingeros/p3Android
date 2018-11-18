@@ -2,7 +2,21 @@ package dadm.scaffold.engine;
 
 import android.graphics.Canvas;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class GameObject {
+
+    protected List<String> types = new ArrayList<>(); //jugador, enemigo, disparo
+    protected int type;
+
+    public GameObject(){
+
+        this.types.add("jugador");
+        this.types.add("enemigo");
+        this.types.add("disparo");
+
+    }
 
     public abstract void startGame();
 
@@ -28,6 +42,10 @@ public abstract class GameObject {
     };
 
     public void onRemovedFromGameUiThread(){
+    }
+
+    public int getType(){
+        return type;
     }
 
 }

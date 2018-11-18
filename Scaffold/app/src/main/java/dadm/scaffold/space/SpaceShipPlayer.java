@@ -19,8 +19,8 @@ public class SpaceShipPlayer extends Ship {
     public SpaceShipPlayer(GameEngine gameEngine){
         super(gameEngine, R.drawable.ship);
         speedFactor = pixelFactor * 100d / 1000d; // We want to move at 100px per second on a 400px tall screen
-        maxX = gameEngine.width - imageWidth;
-        maxY = gameEngine.height - imageHeight;
+        //maxX = gameEngine.width - imageWidth;
+        //maxY = gameEngine.height - imageHeight;
 
         type = types.indexOf("jugador");
         numLifes = 3;
@@ -56,7 +56,7 @@ public class SpaceShipPlayer extends Ship {
         checkFiring(elapsedMillis, gameEngine);
     }
 
-    private void updatePosition(long elapsedMillis, InputController inputController) {
+    protected void updatePosition(long elapsedMillis, InputController inputController) {
         positionX += speedFactor * inputController.horizontalFactor * elapsedMillis;
         if (positionX < 0) {
             positionX = 0;
@@ -73,7 +73,7 @@ public class SpaceShipPlayer extends Ship {
         }
     }
 
-    private void checkFiring(long elapsedMillis, GameEngine gameEngine) {
+    protected void checkFiring(long elapsedMillis, GameEngine gameEngine) {
         if (timeSinceLastFire > TIME_BETWEEN_BULLETS){//(gameEngine.theInputController.isFiring && timeSinceLastFire > TIME_BETWEEN_BULLETS) {
             Bullet bullet = (Bullet) getBullet("bullet");
             if (bullet == null) {

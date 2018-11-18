@@ -25,4 +25,8 @@ public abstract class Projectile extends Sprite {
         elapsedTime = 0;
     }
 
+    public int getParentType(){
+        return parent.getType();
+    }
+
 }

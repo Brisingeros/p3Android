@@ -22,9 +22,6 @@ public abstract class Sprite extends GameObject {
     protected final int imageHeight;
     protected final int imageWidth;
 
-    protected int type;
-    protected List<String> types = new ArrayList<>(); //jugador, enemigo, disparo
-
 
     protected float[] collider;
 
@@ -33,10 +30,6 @@ public abstract class Sprite extends GameObject {
     protected Sprite (GameEngine gameEngine, int drawableRes) {
         Resources r = gameEngine.getContext().getResources();
         Drawable spriteDrawable = r.getDrawable(drawableRes);
-
-        this.types.add("jugador");
-        this.types.add("enemigo");
-        this.types.add("disparo");
 
         this.pixelFactor = gameEngine.pixelFactor;
 
@@ -98,9 +91,5 @@ public abstract class Sprite extends GameObject {
 
     public float[] getCollider() {
         return collider;
-    }
-
-    public int getType(){
-        return type;
     }
 }

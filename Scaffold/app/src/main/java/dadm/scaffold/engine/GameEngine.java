@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import dadm.scaffold.input.InputController;
+import dadm.scaffold.space.Enemies.Destroyer;
+import dadm.scaffold.space.Projectile;
+import dadm.scaffold.space.Ship;
 
 public class GameEngine {
 
@@ -24,6 +27,8 @@ public class GameEngine {
     public int height;
     public double pixelFactor;
 
+    private int gamePoints;
+
     private Activity mainActivity;
 
     public GameEngine(Activity activity, GameView gameView) {
@@ -38,6 +43,7 @@ public class GameEngine {
 
         this.pixelFactor = this.height / 400d;
 
+        gamePoints = 0;
 
     }
 
@@ -62,6 +68,8 @@ public class GameEngine {
         // Start the drawing thread
         theDrawThread = new DrawThread(this);
         theDrawThread.start();
+
+        gameObjects.add(new Destroyer(this));
     }
 
     public void stopGame() {
@@ -107,9 +115,85 @@ public class GameEngine {
 
     public void onUpdate(long elapsedMillis) {
         int numGameObjects = gameObjects.size();
+
+        List<Ship> aliados = new ArrayList<>();
+        List<Ship> enemigos = new ArrayList<>();
+        List<Projectile> balasAliados = new ArrayList<>();
+        List<Projectile> balasEnemigos = new ArrayList<>();
+
+        GameObject aux = null;
+
         for (int i = 0; i < numGameObjects; i++) {
-            gameObjects.get(i).onUpdate(elapsedMillis, this);
+            //gameObjects.get(i).onUpdate(elapsedMillis, this);
+            aux = gameObjects.get(i);
+            switch (aux.getType()){ //jugador, enemigo, disparo
+                case 0:
+                    aliados.add((Ship) aux);
+                    break;
+
+                case 1:
+                    enemigos.add((Ship) aux);
+                    break;
+
+                case 2:
+                    Projectile projAux = (Projectile) aux;
+
+                    //System.out.println("EEEEEEEEEEEEEEEEEEEY");
+                    //System.out.println(projAux.getParentType());
+
+                    if (projAux.getParentType() == 0){
+                        System.out.println("EEEEEEEEEEEEEEEEEEEY");
+                        balasAliados.add(projAux);
+                    } else {
+                        balasEnemigos.add(projAux);
+                    }
+
+                    break;
+
+                default:
+                    break;
+            }
+
+            aux.onUpdate(elapsedMillis,this);
         }
+
+        //System.out.println("Aliados: " + aliados.size());
+        //System.out.println("Enemigos: " + enemigos.size());
+        System.out.println("Balas: " + balasAliados.size());
+        //System.out.println(balasEnemigos.size());
+
+        for (Ship s: aliados) {
+            for (Projectile p: balasEnemigos) {
+                if(s.collisionAABB((Sprite) p)){
+                    p.onCollision(this);
+                    s.onCollision(this);
+                }
+            }
+
+            for (Ship e: enemigos) {
+                if(s.collisionAABB((Sprite) e)){
+                    e.onCollision(this);
+                    s.onCollision(this);
+                }
+            }
+        }
+
+        for (Ship s: enemigos) {
+            for (Projectile p: balasAliados) {
+                if(s.collisionAABB((Sprite) p)){
+                    p.onCollision(this);
+                    s.onCollision(this);
+                }
+            }
+
+            for (Ship e: aliados) {
+                if(s.collisionAABB((Sprite) e)){
+                    e.onCollision(this);
+                    s.onCollision(this);
+                }
+            }
+        }
+
         synchronized (gameObjects) {
             while (!objectsToRemove.isEmpty()) {
                 gameObjects.remove(objectsToRemove.remove(0));
@@ -134,5 +218,9 @@ public class GameEngine {
 
     public Context getContext() {
         return theGameView.getContext();
+    }
+
+    public void addPoints(int pointsOnDestroy) {
+        gamePoints += pointsOnDestroy;
     }
 }

@@ -41,7 +41,7 @@ public class BigBullet extends Projectile {
         gameEngine.removeGameObject(this);
         //Create explosion
         Explosion explode = new Explosion(gameEngine);
-        explode.init(this.positionX + imageWidth/2, this.positionY);
+        explode.init(this.positionX + imageWidth/2, this.positionY, parent);
         gameEngine.addGameObject(explode);
         // And return it to the pool
         parent.releaseBullet(this, "bigbullet");

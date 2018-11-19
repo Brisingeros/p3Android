@@ -6,8 +6,6 @@ import dadm.scaffold.engine.Sprite;
 
 public class Explosion extends Projectile {
 
-    private SpaceShipPlayer parent;
-
     private double elapsedTime;
 
     public Explosion(GameEngine gameEngine){
@@ -31,10 +29,11 @@ public class Explosion extends Projectile {
     }
 
 
-    public void init(double initPositionX, double initPositionY) {
+    public void init(double initPositionX, double initPositionY, Ship parental) {
         positionX = initPositionX - imageWidth/2;
         positionY = initPositionY - imageHeight/2;
         elapsedTime = 0;
+        parent = parental;
     }
 
     @Override

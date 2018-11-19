@@ -3,11 +3,23 @@ package dadm.scaffold.counter;
 import android.content.DialogInterface;
 import android.app.AlertDialog;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 import dadm.scaffold.BaseFragment;
 import dadm.scaffold.PerlinNoise;
@@ -16,6 +28,7 @@ import dadm.scaffold.ScaffoldActivity;
 import dadm.scaffold.engine.FramesPerSecondCounter;
 import dadm.scaffold.engine.GameEngine;
 import dadm.scaffold.engine.GameView;
+import dadm.scaffold.engine.PawnSpawner;
 import dadm.scaffold.input.JoystickInputController;
 import dadm.scaffold.space.Enemies.Destroyer;
 import dadm.scaffold.space.Enemies.Pawn;
@@ -50,27 +63,23 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
                 theGameEngine = new GameEngine(getActivity(), gameView);
                 theGameEngine.setTheInputController(new JoystickInputController(getView()));
 
+                theGameEngine.addGameObject(new SpaceShipPlayer(theGameEngine));
+                theGameEngine.addGameObject(new FramesPerSecondCounter(theGameEngine));
+                theGameEngine.startGame();
+
                 //TODO: Set in GameEngine
                 for(int i = 0; i < 12; i++){
                     theGameEngine.addGameObject(new Destroyer(theGameEngine,i));
                 }
 
-                int offset = -600;
-                int distanceBetween = 70;
-                PerlinNoise perl = new PerlinNoise(theGameEngine);
+                new PawnSpawner(theGameEngine);
 
-                for (int j = 0; j < 5; j++){
-                    theGameEngine.addGameObject(new Pawn(theGameEngine, perl, (offset + j*distanceBetween)));
-                }
-
-                theGameEngine.addGameObject(new SpaceShipPlayer(theGameEngine));
-                theGameEngine.addGameObject(new FramesPerSecondCounter(theGameEngine));
-                theGameEngine.startGame();
             }
         });
 
 
     }
+
 
     @Override
     public void onClick(View v) {

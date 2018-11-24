@@ -5,15 +5,23 @@ import android.content.Context;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import dadm.scaffold.input.InputController;
+import dadm.scaffold.space.Enemies.Destroyer;
+import dadm.scaffold.space.Projectile;
+import dadm.scaffold.space.Ship;
 
 public class GameEngine {
 
+    private Random rnd = new Random(System.currentTimeMillis());
 
     private List<GameObject> gameObjects = new ArrayList<GameObject>();
     private List<GameObject> objectsToAdd = new ArrayList<GameObject>();
     private List<GameObject> objectsToRemove = new ArrayList<GameObject>();
+
+    private Thread pawnThread = null;
+    private Thread destroyerThread = null;
 
     private UpdateThread theUpdateThread;
     private DrawThread theDrawThread;
@@ -23,6 +31,9 @@ public class GameEngine {
     public int width;
     public int height;
     public double pixelFactor;
+
+    private int gamePoints;
+    private int timeWait;
 
     private Activity mainActivity;
 
@@ -38,6 +49,7 @@ public class GameEngine {
 
         this.pixelFactor = this.height / 400d;
 
+        gamePoints = 0;
 
     }
 
@@ -62,6 +74,7 @@ public class GameEngine {
         // Start the drawing thread
         theDrawThread = new DrawThread(this);
         theDrawThread.start();
+
     }
 
     public void stopGame() {
@@ -107,9 +120,76 @@ public class GameEngine {
 
     public void onUpdate(long elapsedMillis) {
         int numGameObjects = gameObjects.size();
+
+        List<Ship> aliados = new ArrayList<>();
+        List<Ship> enemigos = new ArrayList<>();
+        List<Projectile> balasAliados = new ArrayList<>();
+        List<Projectile> balasEnemigos = new ArrayList<>();
+
+        GameObject aux = null;
+
         for (int i = 0; i < numGameObjects; i++) {
-            gameObjects.get(i).onUpdate(elapsedMillis, this);
+            //gameObjects.get(i).onUpdate(elapsedMillis, this);
+            aux = gameObjects.get(i);
+            switch (aux.getType()){ //jugador, enemigo, disparo
+                case 0:
+                    aliados.add((Ship) aux);
+                    break;
+
+                case 1:
+                    enemigos.add((Ship) aux);
+                    break;
+
+                case 2:
+                    Projectile projAux = (Projectile) aux;
+
+                    if (projAux.getParentType() == 0){
+                        balasAliados.add(projAux);
+                    } else {
+                        balasEnemigos.add(projAux);
+                    }
+
+                    break;
+
+                default:
+                    break;
+            }
+
+            aux.onUpdate(elapsedMillis,this);
         }
+
+        for (Ship s: aliados) {
+            for (Projectile p: balasEnemigos) {
+                if(s.collisionAABB((Sprite) p)){
+                    p.onCollision(this);
+                    s.onCollision(this);
+                }
+            }
+
+            for (Ship e: enemigos) {
+                if(s.collisionAABB((Sprite) e)){
+                    e.onCollision(this);
+                    s.onCollision(this);
+                }
+            }
+        }
+
+        for (Ship s: enemigos) {
+            for (Projectile p: balasAliados) {
+                if(s.collisionAABB((Sprite) p)){
+                    p.onCollision(this);
+                    s.onCollision(this);
+                }
+            }
+
+            for (Ship e: aliados) {
+                if(s.collisionAABB((Sprite) e)){
+                    e.onCollision(this);
+                    s.onCollision(this);
+                }
+            }
+        }
+
         synchronized (gameObjects) {
             while (!objectsToRemove.isEmpty()) {
                 gameObjects.remove(objectsToRemove.remove(0));
@@ -117,6 +197,56 @@ public class GameEngine {
             while (!objectsToAdd.isEmpty()) {
                 gameObjects.add(objectsToAdd.remove(0));
             }
+        }
+
+        //Spawners
+
+        if (destroyerThread == null){
+            timeWait = rnd.nextInt(5000) + 4000;
+
+            destroyerThread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    spawnDestroyer(timeWait);
+                }
+            });
+            destroyerThread.start();
+        }
+
+        if (pawnThread == null){
+            timeWait = rnd.nextInt(5000) + 4000;
+
+            pawnThread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    spawnPawn(timeWait);
+                }
+            });
+            pawnThread.start();
+        }
+    }
+
+    public void spawnPawn(int timeToWait){
+        try {
+            Thread.sleep(timeToWait);
+            for(int i = 0; i < 12; i++){
+                addGameObject(new Destroyer(this,i));
+            }
+        } catch (InterruptedException e) {
+            return;
+        } finally {
+            pawnThread = null;
+        }
+    }
+
+    public void spawnDestroyer(int timeToWait){
+        try {
+            Thread.sleep(timeToWait);
+            new PawnSpawner(this);
+        } catch (InterruptedException e) {
+            return;
+        } finally {
+            destroyerThread = null;
         }
     }
 
@@ -134,5 +264,9 @@ public class GameEngine {
 
     public Context getContext() {
         return theGameView.getContext();
+    }
+
+    public void addPoints(int pointsOnDestroy) {
+        gamePoints += pointsOnDestroy;
     }
 }

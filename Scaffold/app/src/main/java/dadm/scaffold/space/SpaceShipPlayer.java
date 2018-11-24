@@ -8,63 +8,38 @@ import dadm.scaffold.engine.GameEngine;
 import dadm.scaffold.engine.Sprite;
 import dadm.scaffold.input.InputController;
 
-public class SpaceShipPlayer extends Sprite {
+public class SpaceShipPlayer extends Ship {
 
-    private static final int INITIAL_BULLET_POOL_AMOUNT = 6;
-    private static final int INITIAL_BIGBULLET_POOL_AMOUNT = 1;
     private static final long TIME_BETWEEN_BULLETS = 250;
     private static final long TIME_BETWEEN_BIGBULLETS = 3000;
-    List<Bullet> bullets = new ArrayList<Bullet>();
-    List<BigBullet> bigbullets = new ArrayList<BigBullet>();
+
     private long timeSinceLastFire;
     private long timeSinceLastBigFire;
-
-    private int numLifes;
-
-    private int maxX;
-    private int maxY;
-    private double speedFactor;
 
     public SpaceShipPlayer(GameEngine gameEngine){
         super(gameEngine, R.drawable.ship);
         speedFactor = pixelFactor * 100d / 1000d; // We want to move at 100px per second on a 400px tall screen
-        maxX = gameEngine.width - imageWidth;
-        maxY = gameEngine.height - imageHeight;
+        //maxX = gameEngine.width - imageWidth;
+        //maxY = gameEngine.height - imageHeight;
 
+        type = types.indexOf("jugador");
         numLifes = 3;
 
-        initBulletPool(gameEngine);
+        if(type != -1)
+            initBulletPool(gameEngine);
     }
 
-    private void initBulletPool(GameEngine gameEngine) {
+    protected void initBulletPool(GameEngine gameEngine) {
+
+        bullets = new ArrayList<>();
+        bigbullets = new ArrayList<>();
+
         for (int i=0; i<INITIAL_BULLET_POOL_AMOUNT; i++) {
             bullets.add(new Bullet(gameEngine));
         }
         for (int i=0; i<INITIAL_BIGBULLET_POOL_AMOUNT; i++) {
             bigbullets.add(new BigBullet(gameEngine));
         }
-    }
-
-    private Bullet getBullet() {
-        if (bullets.isEmpty()) {
-            return null;
-        }
-        return bullets.remove(0);
-    }
-
-    void releaseBullet(Bullet bullet) {
-        bullets.add(bullet);
-    }
-
-    private BigBullet getBigBullet() {
-        if (bigbullets.isEmpty()) {
-            return null;
-        }
-        return bigbullets.remove(0);
-    }
-
-    void releaseBigBullet(BigBullet bullet) {
-        bigbullets.add(bullet);
     }
 
 
@@ -81,7 +56,7 @@ public class SpaceShipPlayer extends Sprite {
         checkFiring(elapsedMillis, gameEngine);
     }
 
-    private void updatePosition(long elapsedMillis, InputController inputController) {
+    protected void updatePosition(long elapsedMillis, InputController inputController) {
         positionX += speedFactor * inputController.horizontalFactor * elapsedMillis;
         if (positionX < 0) {
             positionX = 0;
@@ -98,9 +73,9 @@ public class SpaceShipPlayer extends Sprite {
         }
     }
 
-    private void checkFiring(long elapsedMillis, GameEngine gameEngine) {
+    protected void checkFiring(long elapsedMillis, GameEngine gameEngine) {
         if (timeSinceLastFire > TIME_BETWEEN_BULLETS){//(gameEngine.theInputController.isFiring && timeSinceLastFire > TIME_BETWEEN_BULLETS) {
-            Bullet bullet = getBullet();
+            Bullet bullet = (Bullet) getBullet("bullet");
             if (bullet == null) {
                 return;
             }
@@ -115,7 +90,7 @@ public class SpaceShipPlayer extends Sprite {
         /////////////////////////////
 
         if (gameEngine.theInputController.isFiring && timeSinceLastBigFire > TIME_BETWEEN_BIGBULLETS){//(gameEngine.theInputController.isFiring && timeSinceLastFire > TIME_BETWEEN_BULLETS) {
-            BigBullet bullet = getBigBullet();
+            BigBullet bullet = (BigBullet) getBullet("bigbullet");
             if (bullet == null) {
                 return;
             }
@@ -129,11 +104,12 @@ public class SpaceShipPlayer extends Sprite {
     }
 
     @Override
-    public void onCollision() {
+    public void onCollision(GameEngine gameEngine) {
         numLifes--;
 
         if (numLifes == 0){
-            //TODO: Lose game
+            //TODO: End game
+            gameEngine.removeGameObject(this);
         }
     }
 }

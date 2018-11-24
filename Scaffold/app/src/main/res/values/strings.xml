@@ -9,4 +9,9 @@
     <string name="pause_dialog_message">pause message</string>
     <string name="resume">resume</string>
     <string name="stop">stop</string>
+    <string name="loseGame">TOTAL POINTS</string>
+    <string name="back_to_menu">Return to Menu</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

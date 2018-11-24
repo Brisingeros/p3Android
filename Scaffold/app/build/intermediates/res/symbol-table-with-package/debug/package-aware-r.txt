@@ -770,7 +770,9 @@ id parentPanel
 id percent
 id progress_circular
 id progress_horizontal
+id puntosFinal
 id radio
+id returnMenu
 id right
 id right_icon
 id right_side
@@ -860,6 +862,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_scaffold
 layout fragment_game
+layout fragment_game_over
 layout fragment_main_menu
 layout notification_action
 layout notification_action_tombstone
@@ -924,8 +927,11 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
+string back_to_menu
 string game_title
+string hello_blank_fragment
 string hello_world
+string loseGame
 string pause
 string pause_dialog_message
 string pause_dialog_title

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import dadm.scaffold.counter.GameFragment;
+import dadm.scaffold.counter.GameOverFragment;
 import dadm.scaffold.counter.MainMenuFragment;
 
 public class ScaffoldActivity extends AppCompatActivity {
@@ -28,7 +29,13 @@ public class ScaffoldActivity extends AppCompatActivity {
         navigateToFragment( new GameFragment());
     }
 
-    private void navigateToFragment(BaseFragment dst) {
+    public void endGame(int puntos){
+        GameOverFragment gO = new GameOverFragment();
+        gO.setPuntuacion(puntos);
+        navigateToFragment(gO);
+    }
+
+    public void navigateToFragment(BaseFragment dst) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.container, dst, TAG_FRAGMENT)

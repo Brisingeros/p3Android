@@ -151,6 +151,7 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
 
     }
 
+    /*
     private void playOrPause() {
         Button button = (Button) getView().findViewById(R.id.btn_play_pause);
         if (theGameEngine.isPaused()) {
@@ -162,4 +163,5 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
             button.setText(R.string.resume);
         }
     }
+    */
 }

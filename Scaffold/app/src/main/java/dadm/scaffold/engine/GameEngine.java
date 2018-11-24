@@ -5,6 +5,7 @@ import android.content.Context;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import dadm.scaffold.input.InputController;
 import dadm.scaffold.space.Enemies.Destroyer;
@@ -13,12 +14,15 @@ import dadm.scaffold.space.Ship;
 
 public class GameEngine {
 
+    private Random rnd = new Random(System.currentTimeMillis());
 
     private List<GameObject> gameObjects = new ArrayList<GameObject>();
     private List<GameObject> objectsToAdd = new ArrayList<GameObject>();
     private List<GameObject> objectsToRemove = new ArrayList<GameObject>();
 
-    public int numEnemy = 0;
+    private Thread pawnThread = null;
+    private Thread destroyerThread = null;
+
     private UpdateThread theUpdateThread;
     private DrawThread theDrawThread;
     public InputController theInputController;
@@ -29,6 +33,7 @@ public class GameEngine {
     public double pixelFactor;
 
     private int gamePoints;
+    private int timeWait;
 
     private Activity mainActivity;
 
@@ -192,6 +197,56 @@ public class GameEngine {
             while (!objectsToAdd.isEmpty()) {
                 gameObjects.add(objectsToAdd.remove(0));
             }
+        }
+
+        //Spawners
+
+        if (destroyerThread == null){
+            timeWait = rnd.nextInt(5000) + 4000;
+
+            destroyerThread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    spawnDestroyer(timeWait);
+                }
+            });
+            destroyerThread.start();
+        }
+
+        if (pawnThread == null){
+            timeWait = rnd.nextInt(5000) + 4000;
+
+            pawnThread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    spawnPawn(timeWait);
+                }
+            });
+            pawnThread.start();
+        }
+    }
+
+    public void spawnPawn(int timeToWait){
+        try {
+            Thread.sleep(timeToWait);
+            for(int i = 0; i < 12; i++){
+                addGameObject(new Destroyer(this,i));
+            }
+        } catch (InterruptedException e) {
+            return;
+        } finally {
+            pawnThread = null;
+        }
+    }
+
+    public void spawnDestroyer(int timeToWait){
+        try {
+            Thread.sleep(timeToWait);
+            new PawnSpawner(this);
+        } catch (InterruptedException e) {
+            return;
+        } finally {
+            destroyerThread = null;
         }
     }
 

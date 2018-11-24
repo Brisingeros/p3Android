@@ -269,4 +269,8 @@ public class GameEngine {
     public void addPoints(int pointsOnDestroy) {
         gamePoints += pointsOnDestroy;
     }
+
+    public void gameOver(){
+
+    }
 }

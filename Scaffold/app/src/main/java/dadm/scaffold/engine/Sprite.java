@@ -36,7 +36,7 @@ public abstract class Sprite extends GameObject {
         this.imageHeight = (int) (spriteDrawable.getIntrinsicHeight() * this.pixelFactor);
         this.imageWidth = (int) (spriteDrawable.getIntrinsicWidth() * this.pixelFactor);
 
-        this.collider = new float[]{this.imageWidth*0.9f, this.imageHeight*0.9f};
+        this.collider = new float[]{this.imageWidth*0.45f, this.imageHeight*0.45f};
 
         this.bitmap = ((BitmapDrawable) spriteDrawable).getBitmap();
     }
@@ -58,23 +58,26 @@ public abstract class Sprite extends GameObject {
 
     public boolean collisionAABB(Sprite spr){
 
-        double posX = spr.getPositionX();
-        double posY = spr.getPositionY();
+        double posX = spr.getPositionX() + spr.imageWidth/2;
+        double posY = spr.getPositionY() + spr.imageHeight/2;
         float[] col = spr.getCollider();
 
-        double distance = Math.sqrt(Math.pow(this.positionX - posX, 2) + Math.pow(this.positionY - posY, 2));
+        double pivotX = this.positionX + this.imageWidth/2;
+        double pivotY = this.positionY + this.imageHeight/2;
 
-        if (distance < 100)
+        double distance = Math.sqrt(Math.pow(pivotX - posX, 2) + Math.pow(pivotY - posY, 2));
+
+        if (distance > 300)
             return false;
 
         //X axis collision
-        boolean colAbs = (this.positionX + this.collider[0] > posX) && (this.positionX < posX + col[0]);
+        boolean colAbs = (pivotX + this.collider[0] > posX - col[0]) && (pivotX - this.collider[0] < posX + col[0]);
 
         if (!colAbs)
             return false;
 
         //Y axis collision
-        colAbs = (this.positionY > posY - col[1]) && (this.positionY - this.collider[1] < posY);
+        colAbs = (pivotY + this.collider[1] > posY - col[1]) && (pivotY - this.collider[1] < posY + col[1]);
 
         return colAbs;
     }

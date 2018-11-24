@@ -20,7 +20,7 @@ public class Destroyer extends Enemy {
     public Destroyer(GameEngine gameEngine, int posEnemy) {
         super(gameEngine, R.drawable.ship6);
 
-        positionY = (posEnemy/MAX_ENEMIES_ROW) * (imageHeight + 20);
+        positionY = (posEnemy/MAX_ENEMIES_ROW) * (imageHeight + 20) - this.imageHeight*2.3f;
 
         if(posEnemy >= MAX_ENEMIES_ROW){
             posEnemy = posEnemy - MAX_ENEMIES_ROW;

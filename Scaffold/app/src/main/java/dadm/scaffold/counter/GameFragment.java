@@ -64,7 +64,14 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
                 theGameEngine = new GameEngine(getActivity(), gameView);
                 theGameEngine.setTheInputController(new JoystickInputController(getView()));
 
-                theGameEngine.addGameObject(new Background(theGameEngine));
+                Background bg1 = new Background(theGameEngine, 0.0f, 0.0f);
+                Background bg2 = new Background(theGameEngine, 0.0f, -bg1.getImageHeight() + 5);
+
+                bg1.setBg(bg2);
+                bg2.setBg(bg1);
+
+                theGameEngine.addGameObject(bg1);
+                theGameEngine.addGameObject(bg2);
                 theGameEngine.addGameObject(new SpaceShipPlayer(theGameEngine));
                 theGameEngine.addGameObject(new FramesPerSecondCounter(theGameEngine));
                 theGameEngine.startGame();

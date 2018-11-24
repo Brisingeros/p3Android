@@ -9,12 +9,17 @@ public class Background extends Sprite {
     private double speedFactor;
     private double elapsedTime;
 
+    private Background otherBg;
 
-    public Background(GameEngine gameEngine) {
+
+    public Background(GameEngine gameEngine, float posX, float posY) {
 
         super(gameEngine, R.drawable.background);
 
-        speedFactor = gameEngine.pixelFactor * -300d / 2000d;
+        this.positionX = posX;
+        this.positionY = posY;
+
+        speedFactor = gameEngine.pixelFactor * 300d / 2000d;
         elapsedTime = 0;
         type = -1;
 
@@ -35,12 +40,20 @@ public class Background extends Sprite {
 
         positionY += speedFactor * elapsedMillis;
 
-        if (positionY < -imageHeight) {
+        if (positionY > imageHeight) {
             // And return it to the pool
-            positionY = 0;
+            positionY = otherBg.positionY -this.imageHeight + 5;
         }
 
         elapsedTime += elapsedMillis;
 
+    }
+
+    public int getImageHeight(){
+        return this.imageHeight;
+    }
+
+    public void setBg(Background bg){
+        otherBg = bg;
     }
 }

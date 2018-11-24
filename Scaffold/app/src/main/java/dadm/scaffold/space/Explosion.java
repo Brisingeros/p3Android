@@ -20,7 +20,7 @@ public class Explosion extends Projectile {
     @Override
     public void onUpdate(long elapsedMillis, GameEngine gameEngine) {
 
-        if (elapsedTime > 300){
+        if (elapsedTime > 500){
             gameEngine.removeGameObject(this);
         } else {
             elapsedTime += elapsedMillis;

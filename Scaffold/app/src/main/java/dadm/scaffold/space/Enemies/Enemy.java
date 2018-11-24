@@ -8,6 +8,8 @@ import dadm.scaffold.space.Ship;
 
 public abstract class Enemy extends Ship {
 
+    protected Random rnd = new Random(System.currentTimeMillis());
+
     protected long timeSinceLastFire;
     protected int pointsOnDestroy;
 

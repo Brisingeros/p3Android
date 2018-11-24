@@ -14,6 +14,7 @@ public abstract class Ship extends Sprite {
     protected static final int INITIAL_DIAGONALBULLET_POOL_AMOUNT = 6;
     protected List<Bullet> bullets;
     protected List<BigBullet> bigbullets;
+    protected List<DiagonalBullet> diagonalbullets;
 
     protected int numLifes;
 
@@ -44,7 +45,7 @@ public abstract class Ship extends Sprite {
                 break;
 
             case "diagonalbullet":
-                aux = bullets;
+                aux = diagonalbullets;
                 break;
         }
 
@@ -66,6 +67,7 @@ public abstract class Ship extends Sprite {
                 break;
 
             case "diagonalbullet":
+                diagonalbullets.add((DiagonalBullet) bullet);
                 break;
         }
 

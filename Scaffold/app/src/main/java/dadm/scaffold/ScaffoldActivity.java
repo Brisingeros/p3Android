@@ -7,10 +7,13 @@ import android.view.View;
 
 import dadm.scaffold.counter.GameFragment;
 import dadm.scaffold.counter.MainMenuFragment;
+import dadm.scaffold.counter.ShipsFragment;
+import dadm.scaffold.dummy.DummyContent;
 
-public class ScaffoldActivity extends AppCompatActivity {
+public class ScaffoldActivity extends AppCompatActivity implements ShipsFragment.OnListFragmentInteractionListener  {
 
     private static final String TAG_FRAGMENT = "content";
+    private int idShip = R.drawable.ship;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +28,16 @@ public class ScaffoldActivity extends AppCompatActivity {
 
     public void startGame() {
         // Navigate the the game fragment, which makes the start automatically
-        navigateToFragment( new GameFragment());
+        BaseFragment frag = new GameFragment();
+        Bundle arguments = new Bundle();
+        arguments.putInt("idShip", idShip);
+        frag.setArguments(arguments);
+        navigateToFragment(frag);
     }
 
+    public void selectShip(){
+        navigateToFragment( new ShipsFragment());
+    }
     private void navigateToFragment(BaseFragment dst) {
         getSupportFragmentManager()
                 .beginTransaction()
@@ -69,5 +79,13 @@ public class ScaffoldActivity extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
             }
         }
+    }
+
+    @Override
+    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+
+        idShip = item.id;
+        System.out.println("Nombre de la nave: " + item.name);
+        navigateBack();
     }
 }

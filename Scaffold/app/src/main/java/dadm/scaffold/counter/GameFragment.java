@@ -38,6 +38,7 @@ import dadm.scaffold.space.SpaceShipPlayer;
 
 public class GameFragment extends BaseFragment implements View.OnClickListener {
     private GameEngine theGameEngine;
+    private int idShipPlayer;
 
     public GameFragment() {
     }
@@ -52,6 +53,9 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        idShipPlayer = getArguments().getInt("idShip");
+
         view.findViewById(R.id.btn_play_pause).setOnClickListener(this);
         final ViewTreeObserver observer = view.getViewTreeObserver();
         observer.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener(){
@@ -72,7 +76,7 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
 
                 theGameEngine.addGameObject(bg1);
                 theGameEngine.addGameObject(bg2);
-                theGameEngine.addGameObject(new SpaceShipPlayer(theGameEngine));
+                theGameEngine.addGameObject(new SpaceShipPlayer(theGameEngine, idShipPlayer));
                 theGameEngine.addGameObject(new FramesPerSecondCounter(theGameEngine));
                 theGameEngine.startGame();
 

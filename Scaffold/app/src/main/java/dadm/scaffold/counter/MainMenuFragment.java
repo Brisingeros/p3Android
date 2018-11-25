@@ -1,6 +1,7 @@
 package dadm.scaffold.counter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -28,10 +29,17 @@ public class MainMenuFragment extends BaseFragment implements View.OnClickListen
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         view.findViewById(R.id.btn_start).setOnClickListener(this);
+        view.findViewById(R.id.btn_select).setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View v) {
-        ((ScaffoldActivity)getActivity()).startGame();
+
+        if(v.getId() == R.id.btn_start)
+            ((ScaffoldActivity)getActivity()).startGame();
+
+        if(v.getId() == R.id.btn_select)
+            ((ScaffoldActivity)getActivity()).selectShip();
     }
 }

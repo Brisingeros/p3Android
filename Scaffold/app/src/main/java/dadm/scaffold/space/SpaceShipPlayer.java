@@ -16,8 +16,8 @@ public class SpaceShipPlayer extends Ship {
     private long timeSinceLastFire;
     private long timeSinceLastBigFire;
 
-    public SpaceShipPlayer(GameEngine gameEngine){
-        super(gameEngine, R.drawable.ship);
+    public SpaceShipPlayer(GameEngine gameEngine, int ship){
+        super(gameEngine, ship);
         speedFactor = pixelFactor * 100d / 1000d; // We want to move at 100px per second on a 400px tall screen
         //maxX = gameEngine.width - imageWidth;
         //maxY = gameEngine.height - imageHeight;

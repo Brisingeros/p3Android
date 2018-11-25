@@ -777,6 +777,7 @@ id line3
 id listMode
 id list_item
 id list_ships
+id lives
 id media_actions
 id message
 id middle
@@ -791,9 +792,12 @@ id packed
 id parent
 id parentPanel
 id percent
+id points
 id progress_circular
 id progress_horizontal
+id puntosFinal
 id radio
+id returnMenu
 id right
 id right_icon
 id right_side
@@ -883,6 +887,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_scaffold
 layout fragment_game
+layout fragment_game_over
 layout fragment_main_menu
 layout fragment_ships_list
 layout notification_action
@@ -952,12 +957,16 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
+string back_to_menu
 string exit
 string game_title
 string hello_world
+string lives
+string loseGame
 string pause
 string pause_dialog_message
 string pause_dialog_title
+string points
 string resume
 string search_menu_title
 string start

@@ -12,4 +12,8 @@
     <string name="stop">stop</string>
     <string name="exit">Return</string>
     <string name="titleSelect">Select your favourite ship</string>
+    <string name="loseGame">GAME OVER</string>
+    <string name="back_to_menu">BACK TO MENU</string>
+    <string name="lives">LIVES: </string>
+    <string name="points">POINTS: </string>
 </resources>

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
+ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\44775c2ed9d419d4d2404be85bf46dcb\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\372db64ca7f63b696b4b5eb3a6bc76dd\AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\029ba7693aea244de26859894c996554\AndroidManifest.xml:17:1-22:12
@@ -34,25 +34,25 @@ MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Laura\.gradle\cac
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\959ff89e56d41c3c09c891392e21c930\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\16af8a229ba9d21205d13150ad186d2a\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\caf69c22dedcc4f7989306ce038b6363\AndroidManifest.xml:17:1-22:12
-INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
 	package
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:3:5-28
-		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:3:5-28
+		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
-		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
+		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
-		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:1-22:12
+		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:5:5-20:19
+ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:5:5-20:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\372db64ca7f63b696b4b5eb3a6bc76dd\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\372db64ca7f63b696b4b5eb3a6bc76dd\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\fd89c6475e6d3469b5153626e49db6e6\AndroidManifest.xml:22:5-94
@@ -62,39 +62,39 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Laura\.gra
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\fd89c6475e6d3469b5153626e49db6e6\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:8:9-41
 	android:roundIcon
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:9:9-54
 	android:icon
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:7:9-43
 	android:allowBackup
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:11:9-40
 activity#dadm.scaffold.ScaffoldActivity
-ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:12:9-19:20
+ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:12:9-19:20
 	android:screenOrientation
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:13:13-55
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:13:13-55
 	android:label
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:14:13-56
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:14:13-56
 	android:name
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:12:19-51
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:12:19-51
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:15:13-18:29
+ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:15:13-18:29
 action#android.intent.action.MAIN
-ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:16:17-69
+ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:16:17-69
 	android:name
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:16:25-66
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:17:17-77
+ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:17:17-77
 	android:name
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml:17:27-74
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml:17:27-74
 uses-sdk
-INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\44775c2ed9d419d4d2404be85bf46dcb\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\44775c2ed9d419d4d2404be85bf46dcb\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\372db64ca7f63b696b4b5eb3a6bc76dd\AndroidManifest.xml:5:5-7:41
@@ -155,13 +155,13 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Laura\.gradle\
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\16af8a229ba9d21205d13150ad186d2a\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\caf69c22dedcc4f7989306ce038b6363\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Laura\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\caf69c22dedcc4f7989306ce038b6363\AndroidManifest.xml:20:5-44
-INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
-		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		ADDED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml
+		INJECTED from E:\Laura\Universidad\Curso 4\Desarrollo de Aplicaciones para Android\prueba\p3Android\Scaffold\app\src\main\AndroidManifest.xml

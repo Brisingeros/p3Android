@@ -34,6 +34,8 @@ public abstract class GameObject {
     public void onAddedToGameUiThread(){
     }
 
+    public void onPointsEvent(int gameEvent){}
+    public void onLivesEvent(int actualLifes) {}
     public final Runnable onRemovedRunnable = new Runnable() {
         @Override
         public void run() {

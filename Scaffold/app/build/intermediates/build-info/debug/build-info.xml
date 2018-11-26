@@ -2,38 +2,76 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="27"
-    build-mode="COLD"
+    build-mode="FULL"
     density="xxhdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
     plugin-version="3.2.1"
-    timestamp="1543246977807"
+    timestamp="1543252413207"
     token="5717083452100230773"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="118" />
+        duration="1702" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="6" />
+        duration="190" />
     <task
         name="verifier"
-        duration="1" />
+        duration="50" />
 
     <artifact
+        location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+        type="SPLIT" />
+    <artifact
         location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
+    <artifact
+        location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1543245670299"
+        timestamp="1543252413207"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
             location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
@@ -42,52 +80,31 @@
             location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
             location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
             location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
             location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
-            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
         <artifact
             location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/instant-run-apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1543246865202"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1543246977807"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            location="/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
     </build>
 

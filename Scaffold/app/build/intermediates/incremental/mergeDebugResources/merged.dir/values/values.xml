@@ -1643,12 +1643,14 @@
     <string name="hello_world">Hello</string>
     <string name="lives">LIVES: </string>
     <string name="loseGame">GAME OVER</string>
+    <string name="move">----------MOVE----------</string>
     <string name="pause">Game paused</string>
     <string name="pause_dialog_message">pause message</string>
     <string name="pause_dialog_title">pause title</string>
     <string name="points">POINTS: </string>
     <string name="resume">resume</string>
     <string name="search_menu_title">Search</string>
+    <string name="shoot">---SHOOT-EXPLODE---</string>
     <string name="start">Start game</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="stop">stop</string>

@@ -27,6 +27,8 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
     private GameEngine theGameEngine;
     private int idShipPlayer;
 
+    public View joystick, shooter;
+
     public GameFragment() {
     }
 
@@ -38,11 +40,14 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(final View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         final View v = view;
         idShipPlayer = getArguments().getInt("idShip");
+
+        joystick = v.findViewById(R.id.joystick_main);
+        shooter = v.findViewById(R.id.joystick_touch);
 
         view.findViewById(R.id.btn_play_pause).setOnClickListener(this);
         final ViewTreeObserver observer = view.getViewTreeObserver();
@@ -52,9 +57,39 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
                 //Para evitar que sea llamado múltiples veces,
                 //se elimina el listener en cuanto es llamado
                 observer.removeOnGlobalLayoutListener(this);
+
                 GameView gameView = (GameView) getView().findViewById(R.id.gameView);
                 theGameEngine = new GameEngine(getActivity(), gameView);
                 theGameEngine.setTheInputController(new JoystickInputController(getView()));
+
+                Thread t = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        try {
+                            getActivity().runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    joystick.setBackgroundResource(R.drawable.explosion);
+                                    shooter.setBackgroundResource(R.drawable.explosion);
+                                }
+                            });
+                            Thread.sleep(2000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        } finally {
+                            getActivity().runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    joystick.setBackgroundResource(R.drawable.ship2);
+                                    shooter.setBackgroundResource(R.drawable.ship2);
+                                }
+                            });
+                        }
+                    }
+                });
+
+                t.start();
 
                 Background bg1 = new Background(theGameEngine, 0.0f, 0.0f);
                 Background bg2 = new Background(theGameEngine, 0.0f, -bg1.getImageHeight() + 5);

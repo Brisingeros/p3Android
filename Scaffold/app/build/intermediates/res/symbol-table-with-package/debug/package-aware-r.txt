@@ -774,6 +774,8 @@ id keypad_up
 id left
 id line1
 id line3
+id linear2
+id linearLayout
 id listMode
 id list_item
 id list_ships
@@ -781,6 +783,7 @@ id lives
 id media_actions
 id message
 id middle
+id moveText
 id multiply
 id never
 id none
@@ -816,6 +819,7 @@ id search_plate
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
+id shootText
 id shortcut
 id showCustom
 id showHome
@@ -963,12 +967,14 @@ string game_title
 string hello_world
 string lives
 string loseGame
+string move
 string pause
 string pause_dialog_message
 string pause_dialog_title
 string points
 string resume
 string search_menu_title
+string shoot
 string start
 string status_bar_notification_info_overflow
 string stop

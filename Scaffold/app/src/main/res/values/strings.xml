@@ -16,4 +16,6 @@
     <string name="back_to_menu">BACK TO MENU</string>
     <string name="lives">LIVES: </string>
     <string name="points">POINTS: </string>
+    <string name="move">----------MOVE----------</string>
+    <string name="shoot">---SHOOT-EXPLODE---</string>
 </resources>

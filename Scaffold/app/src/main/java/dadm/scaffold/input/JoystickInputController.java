@@ -1,5 +1,6 @@
 package dadm.scaffold.input;
 
+import android.graphics.Color;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -12,12 +13,26 @@ public class JoystickInputController extends InputController {
 
     private final double maxDistance;
 
+    public final JoystickInputController that = this;
+
     public JoystickInputController(View view) {
         view.findViewById(R.id.joystick_main).setOnTouchListener(new JoystickTouchListener());
         view.findViewById(R.id.joystick_touch).setOnTouchListener(new FireButtonTouchListener());
+        /*
+        joystick.setBackgroundColor(Color.GREEN);
+        shooter.setBackgroundColor(Color.RED);
+        */
+
+//        joystick.setBackgroundResource(R.drawable.explosion);
+//        shooter.setBackgroundResource(R.drawable.explosion);
 
         double pixelFactor = view.getHeight() / 400d;
         maxDistance = 50*pixelFactor;
+    }
+
+    public void setInvisible(){
+//        joystick.setBackgroundResource(R.drawable.ship2);
+//        shooter.setBackgroundResource(R.drawable.ship2);
     }
 
     private class JoystickTouchListener implements View.OnTouchListener {

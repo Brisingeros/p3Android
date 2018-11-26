@@ -70,8 +70,8 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
                             getActivity().runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    joystick.setBackgroundResource(R.drawable.explosion);
-                                    shooter.setBackgroundResource(R.drawable.explosion);
+                                    joystick.setBackgroundResource(R.drawable.MOVE);
+                                    shooter.setBackgroundResource(R.drawable.SHOOT);
                                 }
                             });
                             Thread.sleep(2000);
@@ -81,8 +81,8 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
                             getActivity().runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    joystick.setBackgroundResource(R.drawable.ship2);
-                                    shooter.setBackgroundResource(R.drawable.ship2);
+                                    joystick.setBackgroundResource(0);
+                                    shooter.setBackgroundResource(0);
                                 }
                             });
                         }

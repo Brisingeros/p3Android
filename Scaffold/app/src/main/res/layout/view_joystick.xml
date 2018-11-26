@@ -26,28 +26,4 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linear2"
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <TextView
-            android:id="@+id/moveText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            tools:text="@string/move" />
-
-        <TextView
-            android:id="@+id/shootText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            tools:text="@string/shoot" />
-    </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>

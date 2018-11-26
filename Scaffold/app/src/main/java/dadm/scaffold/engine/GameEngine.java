@@ -36,6 +36,9 @@ public class GameEngine {
     private int gamePoints;
     private int timeWait;
 
+    private long timeToSpawnDestroyers;
+    private long timeToSpawnPawns;
+
     private Activity mainActivity;
 
     public GameEngine(Activity activity, GameView gameView) {
@@ -49,6 +52,9 @@ public class GameEngine {
                 - theGameView.getPaddingTop() - theGameView.getPaddingTop();
 
         this.pixelFactor = this.height / 400d;
+
+        timeToSpawnDestroyers = rnd.nextInt(5000) + 4000;
+        timeToSpawnPawns = rnd.nextInt(5000) + 4000;
 
         gamePoints = 0;
 
@@ -202,53 +208,46 @@ public class GameEngine {
 
         //Spawners
 
-        if (destroyerThread == null){
-            timeWait = rnd.nextInt(5000) + 4000;
+        timeToSpawnDestroyers -= elapsedMillis;
+        timeToSpawnPawns -= elapsedMillis;
+
+        if (timeToSpawnDestroyers < 0){
+            timeToSpawnDestroyers = rnd.nextInt(5000) + 4000;
 
             destroyerThread = new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    spawnDestroyer(timeWait);
+                    spawnDestroyer();
                 }
             });
             destroyerThread.start();
         }
 
-        if (pawnThread == null){
-            timeWait = rnd.nextInt(5000) + 4000;
+        if (timeToSpawnPawns < 0){
+            timeToSpawnPawns = rnd.nextInt(5000) + 4000;
 
             pawnThread = new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    spawnPawn(timeWait);
+                    spawnPawn();
                 }
             });
             pawnThread.start();
         }
     }
 
-    public void spawnPawn(int timeToWait){
-        try {
-            Thread.sleep(timeToWait);
-            for(int i = 0; i < 12; i++){
-                addGameObject(new Destroyer(this,i));
-            }
-        } catch (InterruptedException e) {
-            return;
-        } finally {
-            pawnThread = null;
+    public void spawnPawn(){
+
+        for(int i = 0; i < 12; i++){
+            addGameObject(new Destroyer(this,i));
         }
+
+        pawnThread = null;
     }
 
-    public void spawnDestroyer(int timeToWait){
-        try {
-            Thread.sleep(timeToWait);
+    public void spawnDestroyer(){
             new PawnSpawner(this);
-        } catch (InterruptedException e) {
-            return;
-        } finally {
             destroyerThread = null;
-        }
     }
 
     public void onDraw() {
@@ -293,16 +292,7 @@ public class GameEngine {
     }
 
     public void gameOver(){
-        try {
-            //TODO: MOSTRAR GAMEOVER EN PANTALLA
-
-            this.stopGame();
-            //wait(2000);
-//
-//        } catch (InterruptedException e) {
-//            //
-        } finally {
-            ((ScaffoldActivity)mainActivity).endGame(gamePoints);
-        }
+        this.stopGame();
+        ((ScaffoldActivity)mainActivity).endGame(gamePoints);
     }
 }

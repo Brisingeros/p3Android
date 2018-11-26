@@ -33,7 +33,7 @@ public class StandardGameView extends View implements GameView {
     }
 
     @Override
-    protected void onDraw(Canvas canvas) {
+    protected void onDraw(Canvas canvas){
         super.onDraw(canvas);
         synchronized (gameObjects) {
             int numObjects = gameObjects.size();

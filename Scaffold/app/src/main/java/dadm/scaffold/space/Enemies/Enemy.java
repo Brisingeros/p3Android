@@ -3,7 +3,6 @@ package dadm.scaffold.space.Enemies;
 import java.util.Random;
 
 import dadm.scaffold.engine.GameEngine;
-import dadm.scaffold.engine.Sprite;
 import dadm.scaffold.space.Ship;
 
 public abstract class Enemy extends Ship {
@@ -26,7 +25,7 @@ public abstract class Enemy extends Ship {
 
         if (numLifes == 0){
             gameEngine.removeGameObject(this);
-            gameEngine.addPoints(pointsOnDestroy);
+            gameEngine.onPointsEvent(pointsOnDestroy);
         }
 
     }

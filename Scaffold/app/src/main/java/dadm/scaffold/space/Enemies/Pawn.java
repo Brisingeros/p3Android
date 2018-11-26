@@ -7,7 +7,6 @@ import dadm.scaffold.PerlinNoise;
 import dadm.scaffold.R;
 import dadm.scaffold.engine.GameEngine;
 import dadm.scaffold.input.InputController;
-import dadm.scaffold.space.Bullet;
 import dadm.scaffold.space.DiagonalBullet;
 
 public class Pawn extends Enemy {

@@ -3,42 +3,31 @@ package dadm.scaffold.counter;
 import android.content.DialogInterface;
 import android.app.AlertDialog;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
-
 import dadm.scaffold.BaseFragment;
-import dadm.scaffold.PerlinNoise;
 import dadm.scaffold.R;
 import dadm.scaffold.ScaffoldActivity;
 import dadm.scaffold.engine.FramesPerSecondCounter;
 import dadm.scaffold.engine.GameEngine;
 import dadm.scaffold.engine.GameView;
 import dadm.scaffold.engine.PawnSpawner;
+import dadm.scaffold.engine.UIGameObject;
 import dadm.scaffold.input.JoystickInputController;
 import dadm.scaffold.space.Background;
 import dadm.scaffold.space.Enemies.Destroyer;
-import dadm.scaffold.space.Enemies.Pawn;
 import dadm.scaffold.space.SpaceShipPlayer;
 
 
 public class GameFragment extends BaseFragment implements View.OnClickListener {
     private GameEngine theGameEngine;
     private int idShipPlayer;
+
+    public View joystick, shooter;
 
     public GameFragment() {
     }
@@ -51,10 +40,14 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(final View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        final View v = view;
         idShipPlayer = getArguments().getInt("idShip");
+
+        joystick = v.findViewById(R.id.joystick_main);
+        shooter = v.findViewById(R.id.joystick_touch);
 
         view.findViewById(R.id.btn_play_pause).setOnClickListener(this);
         final ViewTreeObserver observer = view.getViewTreeObserver();
@@ -64,9 +57,39 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
                 //Para evitar que sea llamado múltiples veces,
                 //se elimina el listener en cuanto es llamado
                 observer.removeOnGlobalLayoutListener(this);
+
                 GameView gameView = (GameView) getView().findViewById(R.id.gameView);
                 theGameEngine = new GameEngine(getActivity(), gameView);
                 theGameEngine.setTheInputController(new JoystickInputController(getView()));
+
+                Thread t = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        try {
+                            getActivity().runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    joystick.setBackgroundResource(R.drawable.explosion);
+                                    shooter.setBackgroundResource(R.drawable.explosion);
+                                }
+                            });
+                            Thread.sleep(2000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        } finally {
+                            getActivity().runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    joystick.setBackgroundResource(R.drawable.ship2);
+                                    shooter.setBackgroundResource(R.drawable.ship2);
+                                }
+                            });
+                        }
+                    }
+                });
+
+                t.start();
 
                 Background bg1 = new Background(theGameEngine, 0.0f, 0.0f);
                 Background bg2 = new Background(theGameEngine, 0.0f, -bg1.getImageHeight() + 5);
@@ -78,6 +101,7 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
                 theGameEngine.addGameObject(bg2);
                 theGameEngine.addGameObject(new SpaceShipPlayer(theGameEngine, idShipPlayer));
                 theGameEngine.addGameObject(new FramesPerSecondCounter(theGameEngine));
+                theGameEngine.addGameObject(new UIGameObject(v));
                 theGameEngine.startGame();
 
                 //TODO: Set in GameEngine
@@ -85,7 +109,9 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
                     theGameEngine.addGameObject(new Destroyer(theGameEngine,i));
                 }
 
+
                 new PawnSpawner(theGameEngine);
+
 
             }
         });

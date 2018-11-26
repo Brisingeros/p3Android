@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import dadm.scaffold.counter.GameFragment;
+import dadm.scaffold.counter.GameOverFragment;
 import dadm.scaffold.counter.MainMenuFragment;
 import dadm.scaffold.counter.ShipsFragment;
 import dadm.scaffold.dummy.DummyContent;
@@ -38,12 +39,18 @@ public class ScaffoldActivity extends AppCompatActivity implements ShipsFragment
     public void selectShip(){
         navigateToFragment( new ShipsFragment());
     }
-    private void navigateToFragment(BaseFragment dst) {
+    public void navigateToFragment(BaseFragment dst) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.container, dst, TAG_FRAGMENT)
                 .addToBackStack(null)
                 .commit();
+    }
+
+    public void endGame(int puntos){
+        GameOverFragment gO = new GameOverFragment();
+        gO.setPuntuacion(puntos);
+        navigateToFragment(gO);
     }
 
     @Override

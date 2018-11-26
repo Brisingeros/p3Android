@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import dadm.scaffold.ScaffoldActivity;
 import dadm.scaffold.input.InputController;
 import dadm.scaffold.space.Enemies.Destroyer;
 import dadm.scaffold.space.Projectile;
@@ -254,6 +255,23 @@ public class GameEngine {
         theGameView.draw();
     }
 
+    public void onPointsEvent (int gameEvent) {
+        // We notify all the GameObjects
+        int numObjects = gameObjects.size();
+        addPoints(gameEvent);
+        for (int i = 0; i < numObjects; i++) {
+            gameObjects.get(i).onPointsEvent(gameEvent);
+        }
+    }
+
+    public void onLivesEvent (int actualLifes) {
+        // We notify all the GameObjects
+        int numObjects = gameObjects.size();
+        for (int i = 0; i < numObjects; i++) {
+            gameObjects.get(i).onLivesEvent(actualLifes);
+        }
+    }
+
     public boolean isRunning() {
         return theUpdateThread != null && theUpdateThread.isGameRunning();
     }
@@ -270,7 +288,21 @@ public class GameEngine {
         gamePoints += pointsOnDestroy;
     }
 
-    public void gameOver(){
+    public int getGamePoints() {
+        return gamePoints;
+    }
 
+    public void gameOver(){
+        try {
+            //TODO: MOSTRAR GAMEOVER EN PANTALLA
+
+            this.stopGame();
+            //wait(2000);
+//
+//        } catch (InterruptedException e) {
+//            //
+        } finally {
+            ((ScaffoldActivity)mainActivity).endGame(gamePoints);
+        }
     }
 }

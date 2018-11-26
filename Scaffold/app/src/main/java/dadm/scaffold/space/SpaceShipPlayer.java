@@ -106,7 +106,7 @@ public class SpaceShipPlayer extends Ship {
     @Override
     public void onCollision(GameEngine gameEngine) {
         numLifes--;
-
+        gameEngine.onLivesEvent(numLifes);
         if (numLifes == 0){
             //TODO: End game
             gameEngine.removeGameObject(this);

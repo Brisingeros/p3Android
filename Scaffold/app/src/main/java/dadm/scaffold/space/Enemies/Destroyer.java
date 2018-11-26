@@ -6,7 +6,6 @@ import java.util.Random;
 import dadm.scaffold.R;
 import dadm.scaffold.engine.GameEngine;
 import dadm.scaffold.input.InputController;
-import dadm.scaffold.space.BigBullet;
 import dadm.scaffold.space.Bullet;
 
 public class Destroyer extends Enemy {

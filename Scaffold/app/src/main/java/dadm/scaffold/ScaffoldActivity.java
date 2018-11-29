@@ -66,6 +66,11 @@ public class ScaffoldActivity extends AppCompatActivity implements ShipsFragment
         super.onBackPressed();
     }
 
+    public void exit(){
+        finish();
+        System.exit(0);
+    }
+
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);

@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|top"
         android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:fontFamily="@font/oni"
         android:text="@string/game_title"
         android:textColor="@android:color/background_light" />
 
@@ -39,6 +40,18 @@
             android:layout_gravity="center"
             android:background="#3668ffcf"
             android:text="@string/Select"
+            android:textColor="@android:color/background_light" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Button
+            android:id="@+id/btn_exitApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#3668ffcf"
+            android:text="@string/exitApp"
             android:textColor="@android:color/background_light" />
     </LinearLayout>
 

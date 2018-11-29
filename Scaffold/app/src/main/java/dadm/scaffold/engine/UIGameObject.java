@@ -60,7 +60,7 @@ public class UIGameObject extends GameObject {
         public void run() {
 
             String text = String.valueOf(mLives);
-            mTextLives.setText( "LIVES: " + text);
+            mTextLives.setText( "X" + text);
 
         }
     };

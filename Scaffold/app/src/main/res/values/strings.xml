@@ -1,19 +1,18 @@
 <resources>
-    <string name="app_name">Scaffold</string>
-    <string name="title_activity_main">title</string>
-    <string name="hello_world">Hello</string>
-    <string name="pause">Game paused</string>
-    <string name="start">Start game</string>
-    <string name="Select">Select ship</string>
-    <string name="game_title">game title</string>
-    <string name="pause_dialog_title">pause title</string>
-    <string name="pause_dialog_message">pause message</string>
-    <string name="resume">resume</string>
-    <string name="stop">stop</string>
-    <string name="exit">Return</string>
-    <string name="titleSelect">Select your favourite ship</string>
+    <string name="app_name">Galaga Invaders</string>
+    <string name="title_activity_main">Galaga Invaders</string>
+    <string name="pause">GAME PAUSED</string>
+    <string name="start">START GAME</string>
+    <string name="Select">SELECT SHIP</string>
+    <string name="game_title">GALAGA INVADERS</string>
+    <string name="pause_dialog_title">PAUSE</string>
+    <string name="pause_dialog_message">THE GALAXY NEEDS YOU!</string>
+    <string name="resume">RESUME</string>
+    <string name="stop">STOP</string>
+    <string name="exit">RETURN</string>
+    <string name="exitApp">EXIT</string>
+    <string name="titleSelect">SELECT YOUR FAVOURITE SHIP</string>
     <string name="loseGame">GAME OVER</string>
     <string name="back_to_menu">BACK TO MENU</string>
-    <string name="lives">LIVES: </string>
     <string name="points">POINTS: </string>
 </resources>

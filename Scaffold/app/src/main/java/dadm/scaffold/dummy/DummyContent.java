@@ -31,10 +31,10 @@ public class DummyContent {
 
             addItem(createDummyItem(R.drawable.ship,"ship1"));
             addItem(createDummyItem(R.drawable.ship2,"ship2"));
-            addItem(createDummyItem(R.drawable.ship3,"ship3"));
+            addItem(createDummyItem(R.drawable.ship7,"ship3"));
             addItem(createDummyItem(R.drawable.ship4,"ship4"));
             addItem(createDummyItem(R.drawable.ship5,"ship5"));
-            addItem(createDummyItem(R.drawable.ship6,"ship6"));
+            addItem(createDummyItem(R.drawable.ship10,"ship6"));
 
     }
 

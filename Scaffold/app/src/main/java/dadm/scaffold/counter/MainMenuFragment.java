@@ -30,6 +30,7 @@ public class MainMenuFragment extends BaseFragment implements View.OnClickListen
         super.onViewCreated(view, savedInstanceState);
         view.findViewById(R.id.btn_start).setOnClickListener(this);
         view.findViewById(R.id.btn_select).setOnClickListener(this);
+        view.findViewById(R.id.btn_exitApp).setOnClickListener(this);
 
     }
 
@@ -41,5 +42,11 @@ public class MainMenuFragment extends BaseFragment implements View.OnClickListen
 
         if(v.getId() == R.id.btn_select)
             ((ScaffoldActivity)getActivity()).selectShip();
+
+        if(v.getId() == R.id.btn_exitApp){
+
+            ((ScaffoldActivity)getActivity()).exit();
+
+        }
     }
 }

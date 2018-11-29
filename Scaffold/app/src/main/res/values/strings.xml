@@ -14,5 +14,5 @@
     <string name="titleSelect">SELECT YOUR FAVOURITE SHIP</string>
     <string name="loseGame">GAME OVER</string>
     <string name="back_to_menu">BACK TO MENU</string>
-    <string name="points">POINTS: </string>
+    <string name="points">POINTS </string>
 </resources>

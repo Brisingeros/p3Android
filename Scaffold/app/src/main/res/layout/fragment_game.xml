@@ -23,8 +23,10 @@
             android:id="@+id/points"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/armwarmer"
             android:text="@string/points"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -47,9 +49,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/armwarmer"
                 android:gravity="center"
                 android:text="x2"
-                android:textColor="@android:color/background_light" />
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
         </LinearLayout>
 
     </LinearLayout>
@@ -59,11 +63,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|right"
-        android:layout_marginRight="@dimen/activity_vertical_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
         android:background="#3668ffcf"
+        android:fontFamily="@font/armwarmer"
         android:text="@string/pause"
-        android:textColor="@android:color/background_light" />
+        android:textColor="@android:color/background_light"
+        android:textSize="16sp" />
 
     <include layout="@layout/view_joystick" />
 

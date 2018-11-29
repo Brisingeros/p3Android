@@ -16,10 +16,11 @@
         android:id="@+id/Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/armwarmer"
         android:gravity="center"
         android:text="@string/titleSelect"
         android:textColor="@android:color/background_light"
-        android:textSize="28sp" />
+        android:textSize="30sp" />
 
     <Space
         android:layout_width="match_parent"
@@ -52,8 +53,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="#3668ffcf"
+        android:fontFamily="@font/armwarmer"
         android:text="@string/exit"
-        android:textColor="@android:color/background_light" />
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp" />
 
 </LinearLayout>
 

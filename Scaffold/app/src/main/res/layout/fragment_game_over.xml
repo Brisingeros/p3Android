@@ -16,33 +16,47 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="50dp" />
+            android:layout_height="80dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/armwarmer"
             android:gravity="center_horizontal"
             android:text="@string/loseGame"
+            android:textAlignment="center"
             android:textColor="@android:color/background_light"
-            android:textSize="32dp" />
+            android:textSize="35sp" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="25dp" />
+            android:layout_height="70dp" />
 
         <TextView
             android:id="@+id/puntosFinal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/armwarmer"
             android:gravity="center_horizontal"
+            android:textAlignment="center"
             android:textColor="@android:color/background_light"
-            android:textSize="48dp" />
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/armwarmer"
+            android:text="@string/points"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="48sp" />
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="250dp" />
+            android:layout_height="150dp" />
 
         <Button
             android:id="@+id/returnMenu"
@@ -50,9 +64,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:background="#3668ffcf"
+            android:fontFamily="@font/armwarmer"
             android:gravity="center_vertical|center_horizontal|center"
             android:text="@string/back_to_menu"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </FrameLayout>

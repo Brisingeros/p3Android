@@ -2,12 +2,14 @@ package dadm.scaffold.counter;
 
 import android.content.DialogInterface;
 import android.app.AlertDialog;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
+import android.widget.TextView;
 
 import dadm.scaffold.BaseFragment;
 import dadm.scaffold.R;
@@ -152,6 +154,7 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
 
     private void pauseGameAndShowPauseDialog() {
         theGameEngine.pauseGame();
+
         new AlertDialog.Builder(getActivity(),R.style.AlertDialogStyle)
                 .setTitle(R.string.pause_dialog_title)
                 .setMessage(R.string.pause_dialog_message)
@@ -178,7 +181,6 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
                 })
                 .create()
                 .show();
-
     }
 
     private void playOrPause() {

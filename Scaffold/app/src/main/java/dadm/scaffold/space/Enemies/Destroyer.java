@@ -20,8 +20,23 @@ public class Destroyer extends Enemy {
 
     private Random rnd = new Random(System.currentTimeMillis());
 
-    public Destroyer(GameEngine gameEngine, int posEnemy) {
+    public Destroyer(GameEngine gameEngine) {
         super(gameEngine, R.drawable.ship6);
+
+        MAX_DISTANCE = gameEngine.width / 6;
+        JUMP_DISTANCE = gameEngine.height / 16;
+        distance = 0;
+        direction = 1;
+
+        speedFactor = pixelFactor * 100d / 4000d;
+
+        pointsOnDestroy = 20;
+
+        if(type != -1)
+            initBulletPool(gameEngine);
+    }
+
+    public void init(int posEnemy){
 
         positionY = (posEnemy/MAX_ENEMIES_ROW) * (imageHeight + 20) - this.imageHeight*2.3f;
 
@@ -31,20 +46,14 @@ public class Destroyer extends Enemy {
 
         positionX = (imageWidth * posEnemy) + 20;
 
-        MAX_DISTANCE = gameEngine.width / 6;
-        JUMP_DISTANCE = gameEngine.height / 16;
-        distance = 0;
-        direction = 1;
+        //
 
-        speedFactor = pixelFactor * 100d / 4000d;
         numLifes = rnd.nextInt(2)+1;
 
-        pointsOnDestroy = 20;
+        //
 
         timeSinceLastFire = rnd.nextInt(500);
 
-        if(type != -1)
-            initBulletPool(gameEngine);
     }
 
     @Override
@@ -98,5 +107,16 @@ public class Destroyer extends Enemy {
         else {
             timeSinceLastFire += elapsedMillis;
         }
+    }
+
+    public void onCollision(GameEngine gameEngine) {
+        numLifes--;
+
+        if (numLifes == 0){
+            gameEngine.removeGameObject(this);
+            gameEngine.onPointsEvent(pointsOnDestroy);
+            gameEngine.releaseDestroyer(this);
+        }
+
     }
 }

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Laura\\Universidad\\Curso 4\\Desarrollo de Aplicaciones para Android\\p3Android\\Scaffold\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Laura\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0.aar\\ddf7c769c6f95ede405dee1840cf98a0\\res\\values-v16\\values-v16.xml",
+                    "source": "/home/brisin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/7508e2d16e9be0bb5f019286f2d58472/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Laura\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.0.0.aar\\e161d2237a503359558a1f1e3d076fc4\\res\\values-v16\\values-v16.xml",
+                    "source": "/home/brisin/.gradle/caches/transforms-1/files-1.1/support-compat-26.0.0.aar/9b8917c3f87d40abd3f7e8b41db88477/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

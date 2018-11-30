@@ -15,14 +15,19 @@ import dadm.scaffold.space.Ship;
 
 public class GameEngine {
 
+    private static final int INITIAL_DESTROYER_AMOUNT = 48;
+    private static final int INITIAL_PAWN_AMOUNT = 5;
+
+    private int numDestroyers;
+
+    private List<Destroyer> destroyers;
+    private List<PawnSpawner> spawnersPawn;
+
     private Random rnd = new Random(System.currentTimeMillis());
 
     private List<GameObject> gameObjects = new ArrayList<GameObject>();
     private List<GameObject> objectsToAdd = new ArrayList<GameObject>();
     private List<GameObject> objectsToRemove = new ArrayList<GameObject>();
-
-    private Thread pawnThread = null;
-    private Thread destroyerThread = null;
 
     private UpdateThread theUpdateThread;
     private DrawThread theDrawThread;
@@ -34,7 +39,6 @@ public class GameEngine {
     public double pixelFactor;
 
     private int gamePoints;
-    private int timeWait;
 
     private long timeToSpawnDestroyers;
     private long timeToSpawnPawns;
@@ -64,9 +68,26 @@ public class GameEngine {
         theInputController = inputController;
     }
 
+    public void initGameEngine(){
+        spawnersPawn = new ArrayList<>(INITIAL_PAWN_AMOUNT);
+        destroyers = new ArrayList<>(INITIAL_DESTROYER_AMOUNT);
+
+        for (int i = 0; i < spawnersPawn.size(); i++){
+            spawnersPawn.add(new PawnSpawner(this));
+        }
+
+        for (int i = 0; i < destroyers.size(); i++){
+            destroyers.add(new Destroyer(this));
+        }
+
+        numDestroyers = destroyers.size();
+    }
+
     public void startGame() {
         // Stop a game if it is running
         stopGame();
+
+        initGameEngine();
 
         // Setup the game objects
         int numGameObjects = gameObjects.size();
@@ -211,43 +232,59 @@ public class GameEngine {
         timeToSpawnDestroyers -= elapsedMillis;
         timeToSpawnPawns -= elapsedMillis;
 
-        if (timeToSpawnDestroyers < 0){
+        spawnEnemies();
+    }
+
+    public Destroyer getDestroyer(){
+        if (destroyers.isEmpty())
+            return null;
+
+        numDestroyers--;
+        return destroyers.remove(0);
+    }
+
+    public PawnSpawner getPawnSpawner(){
+        if (spawnersPawn.isEmpty())
+            return null;
+
+        return spawnersPawn.remove(0);
+    }
+
+    public void spawnEnemies(){
+
+        if (timeToSpawnDestroyers < 0 && numDestroyers >= 12){
             timeToSpawnDestroyers = rnd.nextInt(5000) + 4000;
 
-            destroyerThread = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    spawnDestroyer();
+            for(int i = 0; i < 12; i++){
+
+                Destroyer des = getDestroyer();
+
+                if (des != null){
+                    des.init(i);
+                    addGameObject(des);
                 }
-            });
-            destroyerThread.start();
+            }
         }
 
         if (timeToSpawnPawns < 0){
             timeToSpawnPawns = rnd.nextInt(5000) + 4000;
 
-            pawnThread = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    spawnPawn();
-                }
-            });
-            pawnThread.start();
-        }
-    }
+            PawnSpawner pw = getPawnSpawner();
 
-    public void spawnPawn(){
-
-        for(int i = 0; i < 12; i++){
-            addGameObject(new Destroyer(this,i));
+            if (pw != null){
+                pw.init();
+            }
         }
 
-        pawnThread = null;
     }
 
-    public void spawnDestroyer(){
-            new PawnSpawner(this);
-            destroyerThread = null;
+    public void releaseDestroyer(Destroyer des){
+        destroyers.add(des);
+        numDestroyers++;
+    }
+
+    public void releasePawnSpawner(PawnSpawner pw){
+        spawnersPawn.add(pw);
     }
 
     public void onDraw() {

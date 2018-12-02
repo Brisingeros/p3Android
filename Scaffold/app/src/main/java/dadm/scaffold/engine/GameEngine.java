@@ -57,8 +57,8 @@ public class GameEngine {
 
         this.pixelFactor = this.height / 400d;
 
-        timeToSpawnDestroyers = rnd.nextInt(5000) + 4000;
-        timeToSpawnPawns = rnd.nextInt(5000) + 4000;
+        timeToSpawnDestroyers = rnd.nextInt(500);
+        timeToSpawnPawns = rnd.nextInt(500);
 
         gamePoints = 0;
 
@@ -72,11 +72,11 @@ public class GameEngine {
         spawnersPawn = new ArrayList<>(INITIAL_PAWN_AMOUNT);
         destroyers = new ArrayList<>(INITIAL_DESTROYER_AMOUNT);
 
-        for (int i = 0; i < spawnersPawn.size(); i++){
+        for (int i = 0; i < INITIAL_PAWN_AMOUNT; i++){
             spawnersPawn.add(new PawnSpawner(this));
         }
 
-        for (int i = 0; i < destroyers.size(); i++){
+        for (int i = 0; i < INITIAL_DESTROYER_AMOUNT; i++){
             destroyers.add(new Destroyer(this));
         }
 
@@ -232,7 +232,7 @@ public class GameEngine {
         timeToSpawnDestroyers -= elapsedMillis;
         timeToSpawnPawns -= elapsedMillis;
 
-        spawnEnemies();
+        this.spawnEnemies();
     }
 
     public Destroyer getDestroyer(){

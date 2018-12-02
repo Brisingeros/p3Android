@@ -26,7 +26,7 @@ public class PawnSpawner {
         numPawns = 0;
 
         pawns = new ArrayList<>(INITIAL_PAWN_AMOUNT);
-        for (int i = 0; i < pawns.size(); i++){
+        for (int i = 0; i < INITIAL_PAWN_AMOUNT; i++){
             pawns.add(new Pawn(game, that));
         }
     }

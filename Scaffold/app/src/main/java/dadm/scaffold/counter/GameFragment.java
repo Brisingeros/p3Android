@@ -106,13 +106,15 @@ public class GameFragment extends BaseFragment implements View.OnClickListener {
                 theGameEngine.addGameObject(new UIGameObject(v));
                 theGameEngine.startGame();
 
+                /*
                 //TODO: Set in GameEngine
                 for(int i = 0; i < 12; i++){
-                    theGameEngine.addGameObject(new Destroyer(theGameEngine,i));
+                    theGameEngine.addGameObject(new Destroyer(theGameEngine));
                 }
 
 
                 new PawnSpawner(theGameEngine);
+                */
 
 
             }

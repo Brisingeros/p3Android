@@ -18,10 +18,28 @@ public class Destroyer extends Enemy {
 
     private static final long TIME_BETWEEN_BULLETS = 4250;
 
+    private int initLifes;
+
     private Random rnd = new Random(System.currentTimeMillis());
 
-    public Destroyer(GameEngine gameEngine, int posEnemy) {
+    public Destroyer(GameEngine gameEngine) {
         super(gameEngine, R.drawable.ship6);
+
+        MAX_DISTANCE = gameEngine.width / 6;
+        JUMP_DISTANCE = gameEngine.height / 16;
+
+        speedFactor = pixelFactor * 100d / 4000d;
+
+        pointsOnDestroy = 20;
+
+        if(type != -1)
+            initBulletPool(gameEngine);
+    }
+
+    public void init(int posEnemy){
+
+        distance = 0;
+        direction = 1;
 
         positionY = (posEnemy/MAX_ENEMIES_ROW) * (imageHeight + 20) - this.imageHeight*2.3f;
 
@@ -31,20 +49,15 @@ public class Destroyer extends Enemy {
 
         positionX = (imageWidth * posEnemy) + 20;
 
-        MAX_DISTANCE = gameEngine.width / 6;
-        JUMP_DISTANCE = gameEngine.height / 16;
-        distance = 0;
-        direction = 1;
+        //
 
-        speedFactor = pixelFactor * 100d / 4000d;
         numLifes = rnd.nextInt(2)+1;
+        initLifes = numLifes;
 
-        pointsOnDestroy = 20;
+        //
 
         timeSinceLastFire = rnd.nextInt(500);
 
-        if(type != -1)
-            initBulletPool(gameEngine);
     }
 
     @Override
@@ -52,10 +65,9 @@ public class Destroyer extends Enemy {
 
         bullets = new ArrayList<>();
 
-        if (this.numLifes == 1){
-            for (int i=0; i<INITIAL_BULLET_POOL_AMOUNT; i++) {
-                bullets.add(new Bullet(gameEngine));
-            }
+
+        for (int i=0; i<INITIAL_BULLET_POOL_AMOUNT; i++) {
+            bullets.add(new Bullet(gameEngine));
         }
 
     }
@@ -66,7 +78,8 @@ public class Destroyer extends Enemy {
     @Override
     public void onUpdate(long elapsedMillis, GameEngine gameEngine) {
         updatePosition(elapsedMillis, gameEngine.theInputController);
-        checkFiring(elapsedMillis, gameEngine);
+        if (initLifes == 1)
+            checkFiring(elapsedMillis, gameEngine);
 
         if (positionY > maxY){
             gameEngine.removeGameObject(this);
@@ -98,5 +111,16 @@ public class Destroyer extends Enemy {
         else {
             timeSinceLastFire += elapsedMillis;
         }
+    }
+
+    public void onCollision(GameEngine gameEngine) {
+        numLifes--;
+
+        if (numLifes == 0){
+            gameEngine.removeGameObject(this);
+            gameEngine.onPointsEvent(pointsOnDestroy);
+            gameEngine.releaseDestroyer(this);
+        }
+
     }
 }

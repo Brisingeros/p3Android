@@ -1,15 +1,19 @@
 package dadm.scaffold.space.Enemies;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import dadm.scaffold.PerlinNoise;
 import dadm.scaffold.R;
 import dadm.scaffold.engine.GameEngine;
+import dadm.scaffold.engine.PawnSpawner;
 import dadm.scaffold.input.InputController;
 import dadm.scaffold.space.DiagonalBullet;
 
 public class Pawn extends Enemy {
+
+    PawnSpawner parent;
 
     public int toGo;
     public boolean toChange;
@@ -20,23 +24,27 @@ public class Pawn extends Enemy {
 
     private Random rnd = new Random(System.currentTimeMillis());
 
-    public Pawn(GameEngine gameEngine, PerlinNoise perlin, float offsetY) {
+    public Pawn(GameEngine gameEngine, PawnSpawner pw) {
         super(gameEngine, R.drawable.ship3);
+
+        parent = pw;
+
         numLifes = 1;
-
         speedFactor = pixelFactor * 100d / 3000d;
-        positionY = offsetY;
-
-        timeSinceLastFire = rnd.nextInt(500);
-
         pointsOnDestroy = 45;
-
-        rail = perlin;
-        toGo = 0;
-        toChange = false;
 
         if(type != -1)
             initBulletPool(gameEngine);
+    }
+
+    public void init(float offsetY){
+        numLifes = 1;
+        positionY = offsetY;
+        timeSinceLastFire = rnd.nextInt(500);
+
+        rail = parent.getPerl();
+        toGo = 0;
+        toChange = false;
     }
 
     @Override
@@ -87,5 +95,16 @@ public class Pawn extends Enemy {
         if (positionY > maxY){
             gameEngine.removeGameObject(this);
         }
+    }
+
+    public void onCollision(GameEngine gameEngine) {
+        numLifes--;
+
+        if (numLifes == 0){
+            gameEngine.removeGameObject(this);
+            gameEngine.onPointsEvent(pointsOnDestroy);
+            parent.releasePawn(this);
+        }
+
     }
 }

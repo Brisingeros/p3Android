@@ -19,15 +19,4 @@ public abstract class Enemy extends Ship {
 
     }
 
-    @Override
-    public void onCollision(GameEngine gameEngine) {
-        numLifes--;
-
-        if (numLifes == 0){
-            gameEngine.removeGameObject(this);
-            gameEngine.onPointsEvent(pointsOnDestroy);
-        }
-
-    }
-
 }

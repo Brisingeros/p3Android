@@ -1,4 +1,4 @@
-#Sun Dec 02 12:20:51 CET 2018
-base.0=/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/transforms/dexMerger/debug/1
+#Sun Dec 02 13:10:51 CET 2018
+base.0=E\:\\Laura\\Universidad\\Curso 4\\Desarrollo de Aplicaciones para Android\\p3Android\\Scaffold\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 path.0=classes.dex
 renamed.0=classes.dex

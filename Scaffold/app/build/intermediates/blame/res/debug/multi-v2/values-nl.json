@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/brisin/RepositoriosClase/p3Android/Scaffold/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-nl/values-nl.xml",
+            "outputFile": "E:\\Laura\\Universidad\\Curso 4\\Desarrollo de Aplicaciones para Android\\p3Android\\Scaffold\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-nl\\values-nl.xml",
             "map": [
                 {
-                    "source": "/home/brisin/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.0.0.aar/7508e2d16e9be0bb5f019286f2d58472/res/values-nl/values-nl.xml",
+                    "source": "C:\\Users\\Laura\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.0.aar\\ddf7c769c6f95ede405dee1840cf98a0\\res\\values-nl\\values-nl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

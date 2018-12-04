@@ -887,6 +887,7 @@ layout tooltip
 layout view_joystick
 layout view_keypad
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string Select
 string abc_action_bar_home_description
